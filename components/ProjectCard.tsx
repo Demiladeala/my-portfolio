@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import {MdOutlineSwipe} from 'react-icons/md'
 
 type Props = {
   data: any
@@ -9,7 +10,7 @@ type Props = {
 
 export default function ProjectCard({data}: Props) {
   return (
-    <div className='w-screen flex flex-shrink-0 snap-center flex-col space-y-5 items-center justify-center p-20 md:mt-20 h-screen' key={data.id}>
+    <div className='relative w-screen flex flex-shrink-0 snap-center flex-col space-y-5 items-center justify-center p-20 md:mt-20 h-screen' key={data.id}>
       <Link href={data.link}>
       <motion.div
       className='flex justify-center'
@@ -27,6 +28,24 @@ export default function ProjectCard({data}: Props) {
       <Image width={50} height={10} alt='technologies' src={data.stack} className='flex justify-center items-center mx-auto pt-4'/>
       <p className='text-base text-center  text-gray-300 pt-3 max-[375px]:hidden'>{data.description}</p>
       </Link>
+
+      <motion.div 
+      initial={{
+        x:-50,
+        opacity:1
+      }}
+      whileInView={{
+        x:20,
+        opacity:0
+      }}
+      transition={{
+        duration:5,
+        delay:8,
+        repeat: Infinity
+      }}
+      className=' '>
+        <MdOutlineSwipe className='text-orange-400' size={30}/>
+      </motion.div>
     </div>
   )
 }
