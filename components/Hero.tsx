@@ -37,7 +37,7 @@ export default function Hero({}: Props) {
       className='animate-pulse duration-[9s]'><Image className='bg-center m-auto ' src={heroimage} width={130}  alt='portfolio cartoon'/></motion.div>
     </div>
 
-    <h1 className=' text-xl  max-[375px]:text-sm sm:text-3xl font-semibold px-10'>
+    <h1 className=' text-2xl  max-[375px]:text-sm sm:text-3xl font-semibold px-10'>
       <span className='mr-3  '>
       <Typed 
         strings={[
@@ -56,10 +56,10 @@ export default function Hero({}: Props) {
     </h1>
 
     <div className='pt-5 w-[95%] m-auto items-center text-center'>
-      <Link href='#about'><button className='heroButton'>About</button></Link>
-      <Link href='https://docs.google.com/document/d/1s-R3jbyEyK6frRc80coE_m4zfRdz1cKxoX2ZSwirsQ0/edit?usp=sharing'><button className='heroButton'>Resume📄</button></Link>
-      <Link href='#portfolio'><button className='heroButton'>Portfolio📁</button></Link>
-      <Link href='#contact'><button className='heroButton'>Contact</button></Link>   
+      <Link href='#about'><button className='heroButton text-lg'>About</button></Link>
+      <Link href='https://docs.google.com/document/d/1s-R3jbyEyK6frRc80coE_m4zfRdz1cKxoX2ZSwirsQ0/edit?usp=sharing'><button className='heroButton text-lg'>Resume📄</button></Link>
+      <Link href='#portfolio'><button className='heroButton text-lg'>Portfolio📁</button></Link>
+      <Link href='#contact'><button className='heroButton text-lg'>Contact</button></Link>   
     </div>
 
    </motion.div>

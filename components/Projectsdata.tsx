@@ -11,7 +11,7 @@ export const projects = [
         id:'2',
         picture:'/first-portfolio.webp',
         name: 'Frontend Developer Portfolio',
-        description: 'Learnt about pages and routes, Links, Layout component, Images and Metadata, Fetching data (getStaticProps), Dynamic routes (getStaticPaths), Fetching a single item by building a simple portfolio with Next js , Framer Motion and Tailwind',
+        description: 'A simple portfolio with Next js , Framer Motion and Tailwind',
         stack:'/next.svg',
         link: 'https://demiladeala.vercel.app/',
     },
@@ -50,7 +50,7 @@ export const projects = [
     {
         id:'7',
         picture:'/reg page.webp',
-        name: 'Registration page(Form Validation) with js',
+        name: 'Registration page',
         description: 'Registration landing page built with Javascript (FORM VALIDATION) html and css - Task from ZURI',
         stack:'/javascript.svg',
         link: 'https://registration-form.pages.dev/',
@@ -58,7 +58,7 @@ export const projects = [
     {
         id:'8',
         picture:'/huddle-landingpage.webp',
-        name: 'HUDDLE landing page',
+        name: 'landing page',
         description: 'landing page built with html, css and javscript while learning frontend development in ZURI',
         stack:'/html.svg',
         link: 'https://huddle-landing-page.pages.dev/',

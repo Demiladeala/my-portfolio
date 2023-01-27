@@ -175,7 +175,7 @@ export default function Home() {
       </AnimatePresence>
   
     
-      <div className='bg-[#15151a] scroll-smooth text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-orange-400/50 z-0'>
+      <div className='bg-[#15151a] scroll-smooth text-white h-screen snap-y snap-mandatory scrollbar-none  md:overflow-y-scroll overflow-x-hidden md:scrollbar-thin md:scrollbar-track-gray-400/20 md:scrollbar-thumb-orange-400/50 z-0'>
         <Head>
           <title>Oluwademilade's Portfolio</title>
           <meta name="description" content="Oluwademilade Ala frontend developer Portfolio" />
