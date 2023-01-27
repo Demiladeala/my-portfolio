@@ -31,11 +31,11 @@ export default function ProjectCard({data}: Props) {
 
       <motion.div 
       initial={{
-        x:-50,
+        x:20,
         opacity:1
       }}
       whileInView={{
-        x:20,
+        x:-50,
         opacity:0
       }}
       transition={{
@@ -43,6 +43,7 @@ export default function ProjectCard({data}: Props) {
         delay:1,
         repeat:Infinity,
       }}
+      className='relative'
       >
         <MdOutlineSwipe className='text-orange-400' size={30}/>
       </motion.div>
