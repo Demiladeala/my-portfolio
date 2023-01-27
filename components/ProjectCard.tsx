@@ -39,11 +39,11 @@ export default function ProjectCard({data}: Props) {
         opacity:0
       }}
       transition={{
-        duration:5,
-        delay:8,
-        repeat: Infinity
+        duration:1,
+        delay:1,
+        repeat:Infinity,
       }}
-      className=' '>
+      >
         <MdOutlineSwipe className='text-orange-400' size={30}/>
       </motion.div>
     </div>
