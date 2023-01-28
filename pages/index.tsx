@@ -6,15 +6,15 @@ import { AnimatePresence, motion } from 'framer-motion'
 import {AiFillHtml5, AiFillGithub} from 'react-icons/ai'
 import {DiCss3} from 'react-icons/di'
 import{ SiTailwindcss, SiTypescript, SiJavascript, SiNextdotjs, SiFramer, SiReact} from 'react-icons/si'
+import {BsFileArrowUpFill} from 'react-icons/bs'
 import {GrGraphQl} from 'react-icons/gr'
+import React from 'react'
 import { useEffect, useState } from 'react'
 import gsap from 'gsap'
 import Footer from '../components/Footer'
 import Portfolio from '../components/Portfolio'
 import Contact from '../components/Contact'
-
-
-
+import Link from 'next/link'
 
 const textVariants = {
   start: { color: "orange" },
@@ -174,8 +174,7 @@ export default function Home() {
       </motion.div>
       </AnimatePresence>
   
-    
-      <div className='bg-[#15151a] scroll-smooth text-white h-screen snap-y snap-mandatory scrollbar-none  md:overflow-y-scroll overflow-x-hidden md:scrollbar-thin md:scrollbar-track-gray-400/20 md:scrollbar-thumb-orange-400/50 z-0'>
+      <div className= "bg-[#15151a] scroll-smooth text-white h-screen snap-y snap-mandatory scrollbar-none sm:overflow-y-scroll overflow-x-hidden md:scrollbar-thin md:scrollbar-track-gray-400/20 md:scrollbar-thumb-orange-400/50 z-0" >
         <Head>
           <title>Oluwademilade's Portfolio</title>
           <meta name="description" content="Oluwademilade Ala frontend developer Portfolio" />
@@ -209,8 +208,14 @@ export default function Home() {
             <Footer/>
           </section>
 
-        </div>
+          <Link href='#hero'>
+          <motion.div
+          className='text-orange-400 rounded-lg p-1  items-center justify-center z-49 absolute flex bottom-5 right-2 cursor-pointer'>
+            <BsFileArrowUpFill size={35}/>
+          </motion.div>
+          </Link>
 
+        </div>
       </div>
     </>
   );

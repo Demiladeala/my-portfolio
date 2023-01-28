@@ -1,14 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {motion} from 'framer-motion'
 import { SocialIcon } from 'react-social-icons'
+import {BsBrightnessHigh} from 'react-icons/bs'
+import {MdOutlineDarkMode} from 'react-icons/md'
 import Link from 'next/link'
 
 
 type Props = {}
 
 export default function HEADER({}: Props) {
+    const[darkMode, setDarkMode] = useState(false);
   return (
-    <header className='sticky top-0 p-5 flex items-center justify-between max-w-4xl mx-auto z-50'>
+    <header className = 'sticky top-0 p-5 flex items-center justify-between max-w-4xl mx-auto z-50'>
         <motion.div className='flex items-center'
         initial={{
             x: -500,
@@ -40,7 +43,7 @@ export default function HEADER({}: Props) {
 
         </motion.div> 
         
-        <Link href='https://www.linkedin.com/in/oluwademilade-ala-010715239'>
+       
         <motion.div className='flex flex-row items-center text-gray-200  cursor-pointer'
             initial={{
                 x:500,
@@ -57,6 +60,7 @@ export default function HEADER({}: Props) {
                 once:true
             }}
         >
+        <Link href='https://www.linkedin.com/in/oluwademilade-ala-010715239'>
             <SocialIcon
             className=' cursor-pointer'
             network='linkedin'
@@ -64,8 +68,10 @@ export default function HEADER({}: Props) {
             bgColor='transparent'
             />
            <p className=' cursor-pointer hidden md:inline-flex text-sm text-gray-200'>Let's Chat</p>
+           </Link>
+           {darkMode? <BsBrightnessHigh onClick={() => setDarkMode(!darkMode)} className='mx-2'/> : <MdOutlineDarkMode onClick={() => setDarkMode(!darkMode)} className='mx-2'/>}
             </motion.div>
-        </Link>
+
     </header>
   )
 }

@@ -17,7 +17,7 @@
         @apply px-6 py-2 border-b-[#202020] rounded-lg border-b text-xs sm:text-sm md:text-base text-gray-400 transition-all hover:text-orange-400/40 hover:border-b-orange-400/40  m-auto
     }
     .contactInput{
-        @apply outline-none bg-gray-400/30 rounded-sm px-6 py-4 text-gray-300 placeholder-gray-300  focus:text-orange-400/40
+        @apply outline-none bg-gray-100/30 rounded-sm px-6 py-4 text-gray-300 placeholder-gray-100  focus:text-orange-400/70
     }
 }
 
