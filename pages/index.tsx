@@ -6,7 +6,6 @@ import { AnimatePresence, motion } from 'framer-motion'
 import {AiFillHtml5, AiFillGithub} from 'react-icons/ai'
 import {DiCss3} from 'react-icons/di'
 import{ SiTailwindcss, SiTypescript, SiJavascript, SiNextdotjs, SiFramer, SiReact} from 'react-icons/si'
-import {BsFileArrowUpFill} from 'react-icons/bs'
 import {GrGraphQl} from 'react-icons/gr'
 import React from 'react'
 import { useEffect, useState } from 'react'
@@ -14,7 +13,8 @@ import gsap from 'gsap'
 import Footer from '../components/Footer'
 import Portfolio from '../components/Portfolio'
 import Contact from '../components/Contact'
-import Link from 'next/link'
+import ScrollUpButton from '../components/scrollUpButton'
+import { type } from 'os'
 
 const textVariants = {
   start: { color: "orange" },
@@ -24,6 +24,7 @@ const textVariants = {
 
 
 export default function Home() {
+
   const [color, setColor] = useState<keyof typeof textVariants>("start");
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -79,7 +80,7 @@ export default function Home() {
         delay:4.75,
         ease: 'easeInOut',
       }}
-      className='wait-screen w-screen h-screen scroll-smooth bg-[rgb(27,27,28)] font-body absolute flex items-center justify-center z-50 scrollbar-thin scrollbar-track-gray-black scrollbar-thumb-black'> 
+      className='wait-screen w-screen h-screen scroll-smooth bg-[rgb(27,27,28)] font-body absolute flex items-center justify-center z-50 scrollbar-none'> 
           <div>
             <motion.div
               className='ltext text-white text-base tracking-[4.5px] justify-center flex font-bold relative  pointer-events-none select-none min-[500px]:text-2xl sm:tracking-[15px]'>
@@ -174,7 +175,7 @@ export default function Home() {
       </motion.div>
       </AnimatePresence>
   
-      <div className= "bg-[#15151a] scroll-smooth text-white h-screen snap-y snap-mandatory scrollbar-none sm:overflow-y-scroll overflow-x-hidden md:scrollbar-thin md:scrollbar-track-gray-400/20 md:scrollbar-thumb-orange-400/50 z-0" >
+      <div className= "bg-[#15151a] scroll-smooth text-white h-screen snap-y snap-mandatory  overflow-x-hidden scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-orange-400/50 z-0" >
         <Head>
           <title>Oluwademilade's Portfolio</title>
           <meta name="description" content="Oluwademilade Ala frontend developer Portfolio" />
@@ -208,15 +209,23 @@ export default function Home() {
             <Footer/>
           </section>
 
-          <Link href='#hero'>
+          <section>
+            <ScrollUpButton/>
+          </section>
+
+       
+        </div>
+      </div>
+    </>
+  );
+};
+
+/*
+<Link href='#hero'>
           <motion.div
           className='text-orange-400 rounded-lg p-1  items-center justify-center z-49 absolute flex bottom-5 right-2 cursor-pointer'>
             <BsFileArrowUpFill size={35}/>
           </motion.div>
           </Link>
 
-        </div>
-      </div>
-    </>
-  );
-};
+*/

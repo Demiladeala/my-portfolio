@@ -24,7 +24,7 @@ export default function ProjectCard({data}: Props) {
       <Image src={data.picture} width={200} height={100} alt='projects' className='w-full h-full bg-center object-cover hover:bg-opacity-25 rounded-t-md'/>
       <div className='bg-white/5 rounded-b-lg font-sans shadow-gray-500 shadow-sm'>
       <h2 className='text-center py-2 text-white uppercase'>{data.name}</h2>
-      <Image src={data.stack} width={30} height={10} alt='technology' className='flex justify-center items-center m-auto'/>
+      <Image src={data.stack} width={40} height={10} alt='technology' className='flex justify-center items-center m-auto'/>
       <p className='w-[95%] m-auto text-center py-4'>{data.description}</p>
         <div className='flex flex-row w-[95%] px-10 py-4 m-auto justify-between'>
           <Link href={data.link}><button className='underline py-1 px-2 cursor-pointer'>Preview</button></Link>

@@ -24,12 +24,12 @@ export default function Contact({}: Props) {
 
   return (
     <>    
-    <h3 className='relative top-14 sm:top-8 uppercase text-center tracking-[18px]  md:text-xl text-gray-100 '>{contactHeader}</h3>
+    <h3 className='relative top-14 sm:top-8 uppercase text-center tracking-[18px]  md:text-xl text-gray-100 font-bold py-2 mt-10'>{contactHeader}</h3>
     <motion.div
     initial={{opacity:0}}
     whileInView={{opacity:1}}
     transition={{duration:1.5}}
-    className='h-screen flex relative flex-col text-center md:text-left  max-w-7xl px-10 text-gray-100 justify-evenly mx-auto items-center'>
+    className='h-screen flex relative flex-col text-center md:text-left  max-w-7xl px-10 text-gray-100 mt-10 mx-auto items-center'>
              
 
       <div className='flex flex-col space-y-10'>
