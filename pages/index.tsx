@@ -13,7 +13,6 @@ import gsap from 'gsap'
 import Footer from '../components/Footer'
 import Portfolio from '../components/Portfolio'
 import Contact from '../components/Contact'
-import ScrollUpButton from '../components/scrollUpButton'
 import { type } from 'os'
 
 const textVariants = {
@@ -207,10 +206,6 @@ export default function Home() {
 
           <section id='footer' className='snap-center'>
             <Footer/>
-          </section>
-
-          <section>
-            <ScrollUpButton/>
           </section>
 
        
