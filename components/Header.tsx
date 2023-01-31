@@ -34,7 +34,7 @@ export default function HEADER({}: Props) {
             animate={{ rotate: 360 }}
             transition={{ ease: "linear", duration: 1, repeat:1 }}
             >
-            <span className='relative text-3xl ml-4 right-2 font-satisfy italic'>Ala</span>
+            <Link href='https://www.linkedin.com/in/oluwademilade-ala-010715239'><span className='relative text-3xl ml-4 right-2 font-satisfy italic'>Ala</span></Link>
 
             </motion.div>
 
@@ -57,10 +57,10 @@ export default function HEADER({}: Props) {
                 once:true
             }}
         >
-        <Link href='https://www.linkedin.com/in/oluwademilade-ala-010715239'>
+        <Link href='mailto:demiladeala@gmail.com '>
             <SocialIcon
             className=' cursor-pointer'
-            network='linkedin'
+            network='email'
             fgColor='white'
             bgColor='transparent'
             />
