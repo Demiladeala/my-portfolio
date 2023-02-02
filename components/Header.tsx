@@ -8,7 +8,7 @@ type Props = {}
 
 export default function HEADER({}: Props) {
   return (
-    <header className = 'sticky top-0 p-5 flex items-center justify-between max-w-4xl mx-auto z-50'>
+    <header className = 'sticky top-0 p-5 flex items-center justify-between px-4 sm:px-40 bg-[#15151a] overflow-hidden  mx-auto z-50 '>
         <motion.div className='flex items-center'
         initial={{
             x: -500,
@@ -34,7 +34,7 @@ export default function HEADER({}: Props) {
             animate={{ rotate: 360 }}
             transition={{ ease: "linear", duration: 1, repeat:1 }}
             >
-            <Link href='https://www.linkedin.com/in/oluwademilade-ala-010715239'><span className='relative text-3xl ml-4 right-2 font-satisfy italic'>Ala</span></Link>
+            <Link href='#hero'><span className='relative text-3xl ml-4 right-2 font-satisfy italic'>Ala</span></Link>
 
             </motion.div>
 

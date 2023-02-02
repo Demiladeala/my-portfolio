@@ -79,10 +79,10 @@ export default function Home() {
         delay:4.75,
         ease: 'easeInOut',
       }}
-      className='wait-screen w-screen h-screen scroll-smooth bg-[rgb(27,27,28)] font-body absolute flex items-center justify-center z-50 scrollbar-none'> 
+      className='wait-screen w-screen h-screen scroll-smooth bg-[rgb(27,27,28)] font-body absolute flex items-center justify-center z-[1000] scrollbar-none'> 
           <div>
             <motion.div
-              className='ltext text-white text-xl tracking-[4.5px] justify-center flex font-bold relative  pointer-events-none select-none min-[500px]:text-3xl sm:tracking-[15px]'>
+              className='ltext text-white text-base tracking-[4.5px] justify-center flex font-bold relative  pointer-events-none select-none min-[500px]:text-2xl sm:tracking-[15px]'>
               OLUWADEMILADE ALA
               {'<'}<motion.div
               variants={textVariants}
@@ -174,7 +174,7 @@ export default function Home() {
       </motion.div>
       </AnimatePresence>
   
-      <div className= "bg-[#15151a] scroll-smooth text-white h-screen snap-y snap-mandatory  overflow-x-hidden scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-orange-400/50 z-0" >
+      <div className= "bg-[#15151a] scroll-smooth text-white h-screen   overflow-x-hidden scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-orange-400/50 z-0" >
         <Head>
           <title>Oluwademilade's Portfolio</title>
           <meta name="description" content="Oluwademilade Ala frontend developer Portfolio" />

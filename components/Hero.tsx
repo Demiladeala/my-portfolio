@@ -58,7 +58,7 @@ export default function Hero({}: Props) {
       <div className='pt-5 w-[95%] flex flex-col sm:flex-row m-auto items-center text-center'>
         <Link href='#about'><button className='heroButton text-lg'>About</button></Link>
         <Link href='https://docs.google.com/document/d/1s-R3jbyEyK6frRc80coE_m4zfRdz1cKxoX2ZSwirsQ0/edit?usp=sharing'><button className='heroButton text-lg'>Resume</button></Link>
-        <Link href='#portfolio'><button className='heroButton text-lg flex flex-row'>Portfolio<span></span>📁</button></Link>
+        <Link href='#portfolio'><button className='heroButton text-lg flex flex-row'>Projects<span></span>📁</button></Link>
         <Link href='#contact'><button className='heroButton text-lg'>Contact</button></Link>   
       </div>
     </div>
