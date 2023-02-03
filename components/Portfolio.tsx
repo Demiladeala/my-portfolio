@@ -24,7 +24,7 @@ export default function Portfolio({}: cards) {
     transition={{duration:1.5}}
     className='flex relative overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0'>
 
-        <div className='w-[80%] mx-auto mt-28 grid grid-cols-1 sm:grid-cols-2 gap-6 scrollbar-none overflow-hidden snap-x snap-mandatory'>
+        <div className='w-[80%] mx-auto mt-28 grid grid-cols-1 sm:grid-cols-2 gap-6 scrollbar-none snap-x snap-mandatory'>
           {projectMap}
         </div>
     </motion.div>

@@ -8,14 +8,14 @@ const about:string = "WHAT I DO/>";
 export default function About({}: Props) {
   return (
   <>
-    <h3 className='uppercase text-center tracking-[18px] relative  sm:top-12  md:text-xl text-gray-100 font-bold py-2 mt-10'>{about}</h3>
+    <h3 className='uppercase text-center tracking-[18px] relative  sm:top-12  md:text-xl text-gray-100 font-bold mb-8'>{about}</h3>
     <motion.div
     initial={{opacity:0}}
     whileInView={{opacity:1}}
     transition={{duration:1.5}}
-    className=' flex flex-col w-full pt-4 border-2 max-[375px]:pt-2'>
+    className=' flex flex-col w-full pt-4 max-[375px]:pt-2'>
 
-      <div className='w-full flex flex-col gap-6 sm:flex-row md:gap-20 md:w-[95%]'>
+      <div className='w-full flex flex-col gap-8 sm:flex-row md:gap-20 md:w-[95%]'>
         <div className='w-[85%] flex justify-center mx-auto basis-[45%]'>
         <motion.img 
         initial={{
@@ -33,11 +33,11 @@ export default function About({}: Props) {
           duration:1.2
         }}
         src='https://demiladeala.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fabout-image.822e391c.png&w=384&q=75'
-        className='md:mb-0 md:left-28 relative flex-shrink-0 w-[150px] h-[230px] rounded-2xl bg-center object-cover bg-gradient-to-tl from-white via-stone-100 p-4 to-rose-100 md:rounded-lg md:w-[200px] md:h-[300px] md:p-8 max-[360px]:mt-[100px]'
+        className='md:mb-0 md:left-28 relative flex-shrink-0 w-[150px] h-[230px] rounded-2xl bg-center object-cover bg-gradient-to-tl from-white via-stone-100 p-4 to-rose-100 md:rounded-lg md:w-[200px] md:h-[300px] md:p-8 sm:mt-8'
         />
         </div>
         <div className='w-[85%] mx-auto basis-[45%] flex items-center justify-center sm:mr-20'>
-        <p className='text-lg text-gray-100 max-[375px]:text-sm'>Hello, my name is Oluwademilade, and I'm a front-end developer from Nigeria studying Computer Science at the Federal University of Technology in Akure (FUTA).  I appreciate solving difficulties in web development, and I communicate well with my clients to bring out their ideas in the best way possible.</p>
+        <p className='text-lg text-gray-100 max-[375px]:text-sm sm:mt-8 md:mt-2'>Hello, my name is Oluwademilade, and I'm a front-end developer from Nigeria studying Computer Science at the Federal University of Technology in Akure (FUTA).  I appreciate solving difficulties in web development, and I communicate well with my clients to bring out their ideas in the best way possible.</p>
         </div>
       </div>
       

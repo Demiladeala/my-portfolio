@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import React from 'react'
-import {BsFillTelephoneFill} from 'react-icons/bs'
 import { useForm, SubmitHandler } from "react-hook-form";
 
 type Inputs = {
@@ -37,11 +36,6 @@ export default function Contact({}: Props) {
         <h4 className='text-center sm:text-lg mt-8'>
         I'm available for full-time or contract work. Contact me so we can discuss.
         </h4>
-
-        <div className='flex items-center  justify-center'>
-            <BsFillTelephoneFill className='w-7 animate-pulse'/>
-            <p className='flex'>07013071320, 07063634353</p>
-        </div>
 
         <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col space-y-2 w-full mx-auto'>
             <input {...register('name')} className='contactInput rounded-md' placeholder='Your Name' type="text" />

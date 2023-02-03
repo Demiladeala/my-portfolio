@@ -14,11 +14,12 @@ export default function ProjectCard({data}: Props) {
     <Link href={data.link}>
       <motion.div
       initial={{
-        x: -300,
+        y: 300,
+        x:50,
         opacity: 0,
       }}
-      transition={{duration: 1.2}}
-      whileInView={{opacity:1 , x:0}}
+      transition={{duration: 1.2, type:'spring', stiffness:200}}
+      whileInView={{opacity:1 , y:0,x:0}}
       viewport={{once:true}}
       className=''>
       <Image src={data.picture} width={200} height={100} alt='projects' className='w-full h-full bg-center object-cover hover:bg-opacity-25 rounded-t-md'/>
