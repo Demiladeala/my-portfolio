@@ -1,10 +1,10 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
-import {BsFileArrowUpFill} from 'react-icons/bs'
+import { useState, useEffect } from 'react';
+import { BsFileArrowUpFill } from 'react-icons/bs';
 
 type Props = {}
 
-export default function ScrollUpButton({}: Props) {
+export default function Button({}: Props) {
 
     const [backToTopButton, setBackToTopButton] = useState(false);
 
@@ -29,13 +29,22 @@ export default function ScrollUpButton({}: Props) {
       };
     }, []);
 
+
+
   return (
-    <>
-      {backToTopButton && (
+  <>
+    {backToTopButton && (
         <div onClick={scrollUp}  className='text-orange-400 rounded-lg p-1  items-center justify-center z-50 absolute flex bottom-5 right-2 cursor-pointer'>
             <BsFileArrowUpFill size={35}/>
         </div>
-      )}
-    </>
-  )
+    )}
+  </>
+)
 }
+
+/*    
+
+  return (
+    <>
+     
+    </>  */

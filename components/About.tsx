@@ -13,7 +13,7 @@ export default function About({}: Props) {
     initial={{opacity:0}}
     whileInView={{opacity:1}}
     transition={{duration:1.5}}
-    className=' flex flex-col w-full pt-28 max-[375px]:pt-2 h-screen'>
+    className=' flex flex-col w-full pt-28 max-[375px]:pt-2'>
 
       <div className='w-full flex flex-col gap-6 sm:flex-row md:gap-20 md:w-[95%]'>
         <div className='w-[85%] flex justify-center mx-auto basis-[45%]'>
