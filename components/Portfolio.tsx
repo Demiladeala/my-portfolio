@@ -17,7 +17,7 @@ export default function Portfolio({}: cards) {
 
   return (
     <>
-    <h3 className='relative top-16 sm:top-8 max-[360px]:top-24 uppercase text-center tracking-[18px]  md:text-xl text-gray-100 font-bold py-2 mt-10'>{project}</h3>
+    <h3 className='relative top-16 sm:top-8 max-[360px]:top-24 uppercase text-center tracking-[18px]  md:text-xl text-gray-100 font-bold py-2 mt-10 pt-8'>{project}</h3>
     <motion.div 
     initial={{opacity:0}}
     whileInView={{opacity:1}}

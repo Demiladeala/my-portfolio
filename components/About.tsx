@@ -8,12 +8,12 @@ const about:string = "WHAT I DO/>";
 export default function About({}: Props) {
   return (
   <>
-    <h3 className='uppercase text-center tracking-[18px] relative top-16 sm:top-12  md:text-xl text-gray-100 font-bold py-2 mt-10'>{about}</h3>
+    <h3 className='uppercase text-center tracking-[18px] relative  sm:top-12  md:text-xl text-gray-100 font-bold py-2 mt-10'>{about}</h3>
     <motion.div
     initial={{opacity:0}}
     whileInView={{opacity:1}}
     transition={{duration:1.5}}
-    className=' flex flex-col w-full pt-28 max-[375px]:pt-2'>
+    className=' flex flex-col w-full pt-4 border-2 max-[375px]:pt-2'>
 
       <div className='w-full flex flex-col gap-6 sm:flex-row md:gap-20 md:w-[95%]'>
         <div className='w-[85%] flex justify-center mx-auto basis-[45%]'>
