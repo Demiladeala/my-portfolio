@@ -11,7 +11,7 @@ type Props = {
 export default function ProjectCard({data}: Props) {
   return (
    <div key={data.id}>
-    <Link href={data.link}>
+    <Link key={data.id} href={data.link}>
       <motion.div
       initial={{
         y: 300,
@@ -22,6 +22,7 @@ export default function ProjectCard({data}: Props) {
       whileInView={{opacity:1 , y:0,x:0}}
       viewport={{once:true}}
       className=''>
+        
       <Image src={data.picture} width={200} height={100} alt='projects' className='w-full h-full bg-center object-cover hover:bg-opacity-25 rounded-t-md'/>
       <div className='bg-white/5 rounded-b-lg font-sans shadow-gray-500 shadow-sm'>
       <h2 className='text-center py-2 text-white uppercase'>{data.name}</h2>

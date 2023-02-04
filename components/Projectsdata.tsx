@@ -30,7 +30,7 @@ export const projects = [
         id:'4',
         picture:'/laspag.webp',
         name: 'Ecommerce food website',
-        description: 'Pre build of ecommerce website, The aim was to later build the project with react',
+        description: 'Ecommerce website built with html,css and Javscript',
         stack:'/javascript.svg',
         link: 'https://la-spag.pages.dev/',
         source: 'https://github.com/Demiladeala/LASPAG',

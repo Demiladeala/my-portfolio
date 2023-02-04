@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 type Props = {}
 
-export default function HEADER({}: Props) {
+export default function Header({}: Props) {
   return (
     <header className = 'sticky top-0 p-5 flex items-center justify-between px-4 sm:px-40 bg-[#15151a] overflow-hidden  mx-auto z-50 '>
         <motion.div className='flex items-center'

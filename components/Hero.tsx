@@ -44,7 +44,7 @@ export default function Hero({}: Props) {
           strings={[
             "Hi, I'm Oluwademilade Ala",
             "A Frontend Developer",
-            "I design Web apps",
+            "I build Web apps",
           ]}
           typeSpeed={150}
           backSpeed={100}
