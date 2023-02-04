@@ -79,6 +79,7 @@ export default function Home() {
         delay:4.75,
         ease: 'easeInOut',
       }}
+      viewport={{once:true}}
       className='wait-screen w-screen h-screen scroll-smooth bg-[rgb(27,27,28)] font-body absolute flex items-center justify-center z-[1000] scrollbar-none'> 
           <div>
             <motion.div
