@@ -80,7 +80,7 @@ export default function Home() {
         ease: 'easeInOut',
       }}
       viewport={{once:true}}
-      className='wait-screen w-screen h-screen scroll-smooth bg-[rgb(27,27,28)] font-body absolute flex items-center justify-center z-[1000] scrollbar-none'> 
+      className='wait-screen w-screen h-screen scroll-smooth bg-[rgb(27,27,28)] font-SpaceGrotesk absolute flex items-center justify-center z-[1000] scrollbar-none'> 
           <div>
             <motion.div
               className='ltext text-white text-base tracking-[4.5px] justify-center flex font-bold relative  pointer-events-none select-none min-[500px]:text-2xl sm:tracking-[15px]'>
@@ -175,7 +175,7 @@ export default function Home() {
       </motion.div>
       </AnimatePresence>
   
-      <div className= "bg-[#15151a] scroll-smooth text-white h-screen overflow-x-hidden sm:scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-orange-400/50 z-0" >
+      <div className= "bg-[#15151a] scroll-smooth text-white h-screen overflow-x-hidden sm:scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-orange-400/50 z-0 font-SpaceGrotesk" >
         <Head>
           <title>Oluwademilade's Portfolio</title>
           <meta name="description" content="Oluwademilade Ala frontend developer Portfolio" />

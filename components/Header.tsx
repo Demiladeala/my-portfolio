@@ -34,7 +34,7 @@ export default function Header({}: Props) {
             animate={{ rotate: 360 }}
             transition={{ ease: "linear", duration: 1, repeat:1 }}
             >
-            <Link href='#hero'><span className='relative text-3xl ml-4 right-2 font-satisfy italic'>Ala</span></Link>
+            <Link href='#hero'><span className='relative text-3xl ml-4 right-2 font-SpaceGrotesk italic'>Ala</span></Link>
 
             </motion.div>
 

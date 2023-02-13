@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily:{
-        'montserrat':['Montserrat','sans-serif'],
+        'SpaceGrotesk':['Space Grotesk', 'sans-serif'],
         'satisfy':['Satisfy','sans-serif'],
         'lobster':['Lobster Two', 'cursive'],
       },

@@ -37,7 +37,7 @@ export default function About({}: Props) {
         />
         </div>
         <div className='w-[85%] mx-auto basis-[45%] flex items-center justify-center sm:mr-20'>
-        <p className='text-lg text-gray-100 max-[375px]:text-sm sm:mt-8 md:mt-2'>Hello, my name is Oluwademilade, and I'm a front-end developer from Nigeria studying Computer Science at the Federal University of Technology in Akure (FUTA).  I appreciate solving difficulties in web development, and I communicate well with my clients to bring out their ideas in the best way possible.</p>
+        <p className='font-SpaceGrotesk text-lg text-gray-100 max-[375px]:text-sm sm:mt-8 md:mt-2'>Hello, my name is Oluwademilade, and I'm a front-end developer from Nigeria studying Computer Science at the Federal University of Technology in Akure (FUTA).  I appreciate solving difficulties in web development, and I communicate well with my clients to bring out their ideas in the best way possible.</p>
         </div>
       </div>
       
