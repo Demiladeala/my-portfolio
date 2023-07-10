@@ -5,7 +5,7 @@ export const projects = [
         name: 'Chowopa',
         description: 'Ecommerce website that allows vendors to register and display their products to potential customers',
         stack:'REACT, VANILLA CSS',
-        link: 'https://topicals-clone.vercel.app/',
+        link: 'https://chowopa-v2-test.netlify.app/',
         source: 'https://github.com/Fantom-01/chowopa-v2',
     },
     {
