@@ -23,10 +23,10 @@ export default function ProjectCard({data}: Props) {
       whileInView={{opacity:1 , y:0,x:0}}
       viewport={{once:true}}>
         
-      <Image src={data.picture} width={200} height={100} alt='projects' className='w-full h-full bg-center object-cover hover:bg-opacity-25 rounded-t-md'/>
+      <Image src={data.picture} width={400} height={100} alt='projects' className='w-full h-full bg-center object-cover hover:bg-opacity-25 rounded-t-md'/>
       <div className='bg-white/5 rounded-b-lg font-sans shadow-gray-500 shadow-sm'>
       <h2 className='text-center py-2 text-white uppercase'>{data.name}</h2>
-      <p className='w-[95%] m-auto text-center py-4 h-4'>{data.description}</p>
+      <p className='w-[95%] m-auto text-center py-4 min-h-4 mb-8'>{data.description}</p>
       <h2 className='px-10 w-[95%] m-auto text-sm text-gray-400 flex justify-end mt-4'>{data.stack}</h2>
         <div className='flex flex-row gap-3 w-[95%] px-10 pb-4 m-auto mt-4 justify-end'>
           <Link href={data.source}><AiOutlineGithub className=' cursor-pointer' /></Link>

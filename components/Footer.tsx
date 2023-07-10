@@ -8,7 +8,7 @@ type Props = {
 
 export default function Footer({}: Props) {
   return (
-    <footer className='p-8'>
+    <footer className='p-8 pt-12'>
         <p className='text-center text-gray-400 text-sm sm:text-base pb-4'>Copyrights reserved Oluwademilade Ala</p>  
         <div className='flex flex-row gap-4 text-gray-400 justify-center cursor-pointer'>
          <Link href='https://github.com/Demiladeala'><AiFillGithub size={25} className=' hover:text-orange-400/50'/></Link>
