@@ -2,7 +2,8 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import {MdOutlineSwipe} from 'react-icons/md'
+import {GoLinkExternal} from 'react-icons/go'
+import {AiOutlineGithub} from 'react-icons/ai'
 
 type Props = {
   data: any
@@ -11,7 +12,7 @@ type Props = {
 export default function ProjectCard({data}: Props) {
   return (
    <div key={data.id}>
-    <Link key={data.id} href={data.link}>
+    <Link  href={data.link}>
       <motion.div
       initial={{
         y: 300,
@@ -20,17 +21,16 @@ export default function ProjectCard({data}: Props) {
       }}
       transition={{duration: 1.2, type:'spring', stiffness:200}}
       whileInView={{opacity:1 , y:0,x:0}}
-      viewport={{once:true}}
-      className=''>
+      viewport={{once:true}}>
         
       <Image src={data.picture} width={200} height={100} alt='projects' className='w-full h-full bg-center object-cover hover:bg-opacity-25 rounded-t-md'/>
       <div className='bg-white/5 rounded-b-lg font-sans shadow-gray-500 shadow-sm'>
       <h2 className='text-center py-2 text-white uppercase'>{data.name}</h2>
-      <Image src={data.stack} width={40} height={10} alt='technology' className='flex justify-center items-center m-auto'/>
       <p className='w-[95%] m-auto text-center py-4'>{data.description}</p>
-        <div className='flex flex-row w-[95%] px-10 py-4 m-auto justify-between'>
-          <Link href={data.link}><button className='underline py-1 px-2 cursor-pointer'>Preview</button></Link>
-          <Link href={data.source}><button className='underline py-1 px-2 cursor-pointer'>Source</button></Link>
+      <h2 className='px-10 w-[95%] m-auto text-sm text-gray-400 flex justify-end'>{data.stack}</h2>
+        <div className='flex flex-row gap-3 w-[95%] px-10 pb-4 m-auto mt-4 justify-end'>
+          <Link href={data.source}><AiOutlineGithub className=' cursor-pointer' /></Link>
+          <Link href={data.link}><GoLinkExternal className=' cursor-pointer'/></Link>
         </div>
       </div>
       </motion.div>

@@ -13,7 +13,6 @@ import gsap from 'gsap'
 import Footer from '../components/Footer'
 import Portfolio from '../components/Portfolio'
 import Contact from '../components/Contact'
-import { type } from 'os'
 
 const textVariants = {
   start: { color: "orange" },
@@ -175,7 +174,7 @@ export default function Home() {
       </motion.div>
       </AnimatePresence>
   
-      <div className= "bg-[#15151a] scroll-smooth text-white h-screen overflow-x-hidden sm:scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-orange-400/50 z-0 font-SpaceGrotesk" >
+      <div className= "bg-[#15151a] scroll-smooth text-white h-screen overflow-x-hidden sm:scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-orange-400/50 z-0" >
         <Head>
           <title>Oluwademilade's Portfolio</title>
           <meta name="description" content="Oluwademilade Ala frontend developer Portfolio" />
