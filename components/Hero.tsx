@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import Typed from 'react-typed'
 import { Cursor } from 'react-simple-typewriter'
 import Link from 'next/link'
-import heroimage from '../public/my--image.png'
+import heroimage from '../public/my-image.jpg'
 
 type Props = {}
 
@@ -23,7 +23,7 @@ export default function Hero({}: Props) {
     }}
     className='h-screen relative flex flex-col space-y-8 sm:items-center justify-center'>
     <div className=''>
-      <div className=' h-40 w-40 bg-center object-cover mx-auto bg-gradient-to-br from-blue-400 to-gray-50 rounded-full  duration-75'>
+      <div className=' bg-center object-cover mx-auto bg-gradient-to-b rounded-full  duration-75'>
         <motion.div
         initial={{
           y:10
@@ -35,7 +35,7 @@ export default function Hero({}: Props) {
           repeat: Infinity,
           duration:7, type:'tween'
         }}
-        className='animate-pulse duration-[9s]'><Image className='bg-center m-auto ' src={heroimage} width={130}  alt='portfolio cartoon'/></motion.div>
+        className=''><Image className='bg-center m-auto rounded-[50%] h-40 w-40 mb-4' src={heroimage} width={200}  alt='portfolio cartoon'/></motion.div>
       </div>
 
       <h1 className=' text-2xl text-center max-[375px]:text-sm sm:text-3xl font-semibold px-10'>
