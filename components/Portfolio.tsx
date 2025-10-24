@@ -85,7 +85,7 @@ export default function Projects() {
               key={project.id}
               href={project.link}
               target="_blank"
-              className="flex items-center gap-1 text-amber-400 hover:underline"
+              className="flex items-center gap-1"
             >
               <motion.div
                 key={project.id}
