@@ -56,6 +56,7 @@ export default function Projects() {
       >
         {categories.map((cat) => (
           <button
+            type="button"
             key={cat}
             onClick={() => {
               setActive(cat);
@@ -80,77 +81,84 @@ export default function Projects() {
       >
         <AnimatePresence>
           {displayed.map((project) => (
-            <motion.div
+            <a
               key={project.id}
-              layout
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -30 }}
-              transition={{ duration: 0.6 }}
-              className="relative bg-gray-800/40 backdrop-blur-lg border border-white/10 rounded-2xl overflow-scroll hover:-translate-y-1 hover:shadow-amber-400/20 transition-all duration-500"
+              href={project.link}
+              target="_blank"
+              className="flex items-center gap-1 text-amber-400 hover:underline"
             >
-              <div className="relative w-full h-52 overflow-hidden">
-                <Image
-                  src={project.image}
-                  alt={project.title}
-                  width={600}
-                  height={400}
-                  className={`${
-                    project.contain
-                      ? "object-contain bg-gray-900"
-                      : "object-cover"
-                  } w-full h-full opacity-90 hover:opacity-100 transition`}
-                />
-              </div>
-              <div className="p-6 flex flex-col justify-between h-[230px]">
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">
-                    {project.description}
-                  </p>
+              <motion.div
+                key={project.id}
+                layout
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -30 }}
+                transition={{ duration: 0.6 }}
+                className="relative bg-gray-800/40 backdrop-blur-lg border border-white/10 rounded-2xl overflow-scroll hover:-translate-y-1 hover:shadow-amber-400/20 transition-all duration-500"
+              >
+                <div className="relative w-full h-52 overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    width={600}
+                    height={400}
+                    className={`${
+                      project.contain
+                        ? "object-contain bg-gray-900"
+                        : "object-cover"
+                    } w-full h-full opacity-90 hover:opacity-100 transition`}
+                  />
                 </div>
+                <div className="p-6 flex flex-col justify-between h-[230px]">
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-2">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-400 text-sm leading-relaxed">
+                      {project.description}
+                    </p>
+                  </div>
 
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {project?.tech?.length ? (
-                    project.tech.map((t, i) => (
-                      <span
-                        key={i}
-                        className="px-2 py-1 text-xs rounded-full bg-gray-700 text-gray-300"
-                      >
-                        {t}
-                      </span>
-                    ))
-                  ) : (
-                    <span className="text-gray-500 text-xs"></span>
-                  )}
-                </div>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {project?.tech?.length ? (
+                      project.tech.map((t, i) => (
+                        <span
+                          key={i}
+                          className="px-2 py-1 text-xs rounded-full bg-gray-700 text-gray-300"
+                        >
+                          {t}
+                        </span>
+                      ))
+                    ) : (
+                      <span className="text-gray-500 text-xs"></span>
+                    )}
+                  </div>
 
-                <div className="mt-5 flex gap-4">
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    className="flex items-center gap-1 text-amber-400 hover:underline"
-                  >
-                    <ExternalLink size={16} /> Live
-                  </a>
-                  {project.source ? (
+                  <div className="mt-5 flex gap-4">
                     <a
-                      href={project.source}
+                      href={project.link}
                       target="_blank"
-                      className="flex items-center gap-1 text-gray-400 hover:text-gray-200"
+                      className="flex items-center gap-1 text-amber-400 hover:underline"
                     >
-                      <Github size={16} /> Code
+                      <ExternalLink size={16} /> Live
                     </a>
-                  ) : (
-                    <span className="flex items-center gap-1 text-gray-600 cursor-not-allowed opacity-50">
-                      <Github size={16} /> Code
-                    </span>
-                  )}
+                    {project.source ? (
+                      <a
+                        href={project.source}
+                        target="_blank"
+                        className="flex items-center gap-1 text-gray-400 hover:text-gray-200"
+                      >
+                        <Github size={16} /> Code
+                      </a>
+                    ) : (
+                      <span className="flex items-center gap-1 text-gray-600 cursor-not-allowed opacity-50">
+                        <Github size={16} /> Code
+                      </span>
+                    )}
+                  </div>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            </a>
           ))}
         </AnimatePresence>
       </motion.div>
@@ -161,6 +169,7 @@ export default function Projects() {
         totalPages > 1 && (
           <div className="flex justify-center items-center gap-4 mt-10">
             <button
+              type="button"
               onClick={prevPage}
               disabled={page === 1}
               className="px-3 py-1 border border-gray-600 text-gray-300 rounded-md disabled:opacity-40"
@@ -171,6 +180,7 @@ export default function Projects() {
               {page} / {totalPages}
             </span>
             <button
+              type="button"
               onClick={nextPage}
               disabled={page === totalPages}
               className="px-3 py-1 border border-gray-600 text-gray-300 rounded-md disabled:opacity-40"
