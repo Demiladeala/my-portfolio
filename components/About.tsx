@@ -1,85 +1,85 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
+import Lottie from "lottie-react";
+import laptopAnimation from "../public/animations/laptop.json";
 
-type Props = {}
-
-const about:string = "WHAT I DO/>";
+type Props = {};
 
 export default function About({}: Props) {
   return (
-  <>
-    <h3 className='uppercase text-center tracking-[18px] relative  sm:top-12  md:text-xl text-gray-100 font-bold mb-8 pt-24 sm:pt-10'>{about}</h3>
-    <motion.div
-    initial={{opacity:0}}
-    whileInView={{opacity:1}}
-    transition={{duration:1.5}}
-    className=' flex flex-col w-full pt-4 max-[375px]:pt-2'>
+    <section className="relative w-full py-20 px-6 sm:px-12 overflow-hidden">
+      {/* Animated gradient background */}
+      <motion.div
+        className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-800 to-black opacity-80"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.8 }}
+        transition={{ duration: 1.5 }}
+      />
 
-      <div className='w-full flex flex-col gap-8 sm:flex-row sm:justify-between md:gap-20 md:w-[95%]'>
-        <div className='w-[85%] flex justify-center mx-auto basis-[45%]'>
-        <motion.img 
-        initial={{
-          x: -200,
-          opacity:0,
-        }}
-        whileInView={{
-          x:0,
-          opacity:1
-        }}
-        viewport={{
-          once: true
-        }}
-        transition={{
-          duration:1.2
-        }}
-        src='https://demiladeala.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fabout-image.822e391c.png&w=384&q=75'
-        className='md:mb-0 md:left-28 relative flex-shrink-0 w-[150px] h-[230px] rounded-2xl bg-center object-cover bg-gradient-to-tl from-white via-stone-100 p-4 to-rose-100 md:rounded-lg md:w-[200px] md:h-[300px] md:p-8 sm:mt-8'
-        />
-        </div>
-        <div className='w-[85%] mx-auto basis-[45%] flex items-center justify-center sm:mr-20'>
-        <p className='font-SpaceGrotesk text-lg text-gray-100 max-[375px]:text-sm sm:mt-8 md:mt-2'>Hello, my name is Oluwademilade, and I'm a front-end developer from Nigeria studying Computer Science at the Federal University of Technology in Akure (FUTA).  I appreciate solving difficulties in web development, and I communicate well with my clients to bring out their ideas in the best way possible.</p>
-        </div>
-      </div>
-      
+      {/* Floating gradient orb */}
+      <motion.div
+        className="absolute -top-10 left-10 w-72 h-72 bg-gradient-to-tr from-amber-400 via-pink-500 to-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"
+        animate={{ y: [0, 20, 0] }}
+        transition={{ duration: 6, repeat: Infinity }}
+      />
 
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="relative z-[1] text-center text-3xl sm:text-4xl font-bold text-white mb-12"
+      >
+        What I do /{">"}
+      </motion.h2>
 
-    </motion.div>
-    </>
-  )
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+        viewport={{ once: true }}
+        className="relative z-10 flex flex-col sm:flex-row items-center justify-between gap-12 sm:gap-20 max-w-6xl mx-auto"
+      >
+        {/* Left side – animation */}
+        <motion.div
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1.2 }}
+          viewport={{ once: true }}
+          className="basis-1/2 flex justify-center"
+        >
+          <div className="w-[220px] sm:w-[280px] md:w-[320px] lg:w-[380px] drop-shadow-xl rounded-3xl bg-gradient-to-tr from-gray-800 to-gray-700 p-4 sm:p-6 backdrop-blur-lg border border-white/10">
+            <Lottie animationData={laptopAnimation} loop={true} />
+          </div>
+        </motion.div>
+
+        {/* Right side – text */}
+        <motion.div
+          initial={{ x: 100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1.2 }}
+          viewport={{ once: true }}
+          className="basis-1/2 text-gray-200 text-center sm:text-left"
+        >
+          <p className="font-SpaceGrotesk text-lg sm:text-xl leading-relaxed">
+            A Software Engineer passionate about creating high-quality,
+            user-focused digital experiences. I specialize in building
+            performant softwares using modern technologies like{" "}
+            <span className="text-pink-400">React</span>,{" "}
+            <span className="text-purple-400">React Native</span>,
+            <span className="text-pink-400"> TypeScript</span>, and
+            <span className="text-blue-400"> Next.Js</span>.
+          </p>
+
+          <p className="mt-6 font-SpaceGrotesk text-lg sm:text-xl leading-relaxed">
+            I thrive on solving challenging problems, designing intuitive
+            interfaces, and collaborating with teams to bring bold ideas to
+            life. My goal is to craft software that's not only functional but
+            delightful to use.
+          </p>
+        </motion.div>
+      </motion.div>
+    </section>
+  );
 }
-
-{/* <div class="font-body h-[250px] w-44 m-auto mt-24 rounded-xl text-white p-8 bg-gradient-to-tl from-white via-stone-100 to-rose-100 md:mt-10 md:mr-10 md:w-[20%] md:h-[20%]"><img srcset="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fabout-image.822e391c.png&amp;w=256&amp;q=75 1x, /_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fabout-image.822e391c.png&amp;w=384&amp;q=75 2x" src="/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fabout-image.822e391c.png&amp;w=384&amp;q=75" width="180" height="303" decoding="async" data-nimg="1" class="bg-center relative w-full" loading="lazy" style="color: transparent;"></div> */}
-
-
-/*
-
-max-[380px]:pt-12
-
-<div className='border-2 w-full mt-24 flex flex-shrink-0 justify-center max-h-full'>
-<motion.img 
-initial={{
-  x: -200,
-  opacity:0,
-}}
-whileInView={{
-  x:0,
-  opacity:1
-}}
-viewport={{
-  once: true
-}}
-transition={{
-  duration:1.2
-}}
-src='https://demiladeala.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fabout-image.822e391c.png&w=384&q=75'
-className='-mb-12 md:mb-0 md:left-28 relative flex-shrink-0 w-[150px] h-[230px] rounded-2xl bg-center object-cover bg-gradient-to-tl from-white via-stone-100 p-4 to-rose-100 md:rounded-lg md:w-[200px] md:h-[300px] md:p-8 max-[360px]:mt-[100px]'
-/></div>
-
-
-
-<div className='space-y-3 px-0 max-[360px]:mt-28 border-2'>
-<p className='text-lg text-gray-100 max-[375px]:text-sm'>Hello, my name is Oluwademilade, and I'm a front-end developer from Nigeria studying at the Federal University of Technology in Akure (FUTA).  I appreciate solving difficulties in web development, and I communicate well with my clients to bring out their ideas in the best way possible.</p>
-</div>
-
-
-*/
