@@ -63,10 +63,8 @@ export default function About({}: Props) {
           className="basis-1/2 text-gray-200 text-center sm:text-left"
         >
           <p className="font-SpaceGrotesk text-lg sm:text-xl leading-relaxed">
-            A Software Engineer passionate about creating high-quality,
-            user-focused digital experiences. I specialize in building
-            performant softwares using modern technologies like{" "}
-            <span className="text-pink-400">React</span>,{" "}
+            I specialize in building performant softwares using modern
+            technologies like <span className="text-pink-400">React</span>,{" "}
             <span className="text-purple-400">React Native</span>,
             <span className="text-pink-400"> TypeScript</span>, and
             <span className="text-blue-400"> Next.Js</span>.
