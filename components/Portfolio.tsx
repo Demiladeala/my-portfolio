@@ -85,7 +85,7 @@ export default function Projects() {
               key={project.id}
               href={project.link}
               target="_blank"
-              className="flex items-center gap-1"
+              className="w-full flex items-center gap-1"
             >
               <motion.div
                 key={project.id}
@@ -94,7 +94,7 @@ export default function Projects() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -30 }}
                 transition={{ duration: 0.6 }}
-                className="relative bg-gray-800/40 backdrop-blur-lg border border-white/10 rounded-2xl overflow-scroll hover:-translate-y-1 hover:shadow-amber-400/20 transition-all duration-500"
+                className="relative bg-gray-800/40 w-full backdrop-blur-lg border border-white/10 rounded-2xl overflow-scroll hover:-translate-y-1 hover:shadow-amber-400/20 transition-all duration-500"
               >
                 <div className="relative w-full h-52 overflow-hidden">
                   <Image
