@@ -20,10 +20,6 @@ export default function Header({}: Props) {
           opacity: 1,
           scale: 1,
         }}
-        transition={{
-          delay: 3,
-          duration: 3.5,
-        }}
       >
         {/*Logo */}
         <motion.div
@@ -51,7 +47,6 @@ export default function Header({}: Props) {
           opacity: 1,
           scale: 1,
         }}
-        transition={{ delay: 3, duration: 3.5 }}
       >
         <Link href="mailto:demiladeala@gmail.com ">
           <SocialIcon
