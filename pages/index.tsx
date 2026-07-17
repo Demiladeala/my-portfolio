@@ -21,6 +21,7 @@ import gsap from "gsap";
 import Footer from "../components/Footer";
 import Portfolio from "../components/Portfolio";
 import Contact from "../components/Contact";
+import WorkWithMe from "../components/WorkWithMe";
 
 const textVariants = {
   start: { color: "orange" },
@@ -43,12 +44,12 @@ export default function Home() {
       display: "flex",
     })
       .to(".wait-screen", {
-        duration: 1,
+        duration: 0.5,
         opacity: 1,
       })
       .to(".wait-screen", {
-        delay: 3,
-        duration: 3,
+        delay: 1.2,
+        duration: 0.8,
         opacity: 0,
         onComplete: () => {
           tl.set(".wait-screen", {
@@ -75,8 +76,8 @@ export default function Home() {
             display: "none",
           }}
           transition={{
-            duration: 6,
-            delay: 4.75,
+            duration: 1,
+            delay: 1.9,
             ease: "easeInOut",
           }}
           viewport={{ once: true }}
@@ -187,6 +188,10 @@ export default function Home() {
 
           <section id="hero" className=" snap-start">
             <Hero />
+          </section>
+
+          <section id="work-with-me" className="snap-center">
+            <WorkWithMe />
           </section>
 
           <section id="about" className="snap-center">

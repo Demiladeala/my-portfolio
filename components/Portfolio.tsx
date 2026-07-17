@@ -18,16 +18,23 @@ const categories = [
 export default function Projects() {
   const [active, setActive] = useState("All");
   const [page, setPage] = useState(1);
+  const [isMobile, setIsMobile] = useState(false);
   const perPage = 5;
+
+  React.useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 640);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
 
   const filtered =
     active === "All" ? projects : projects.filter((p) => p.category === active);
 
   const totalPages = Math.ceil(filtered.length / perPage);
-  const displayed =
-    typeof window !== "undefined" && window.innerWidth < 640
-      ? filtered.slice((page - 1) * perPage, page * perPage)
-      : filtered;
+  const displayed = isMobile
+    ? filtered.slice((page - 1) * perPage, page * perPage)
+    : filtered;
 
   const nextPage = () => setPage((p) => (p < totalPages ? p + 1 : p));
   const prevPage = () => setPage((p) => (p > 1 ? p - 1 : p));
@@ -81,11 +88,10 @@ export default function Projects() {
       >
         <AnimatePresence>
           {displayed.map((project) => (
-            <a
+            <div
               key={project.id}
-              href={project.link}
-              target="_blank"
-              className="w-full flex items-center gap-1"
+              onClick={() => window.open(project.link, "_blank")}
+              className="w-full flex items-stretch gap-1 cursor-pointer"
             >
               <motion.div
                 key={project.id}
@@ -94,7 +100,7 @@ export default function Projects() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -30 }}
                 transition={{ duration: 0.6 }}
-                className="relative bg-gray-800/40 w-full backdrop-blur-lg border border-white/10 rounded-2xl overflow-scroll hover:-translate-y-1 hover:shadow-amber-400/20 transition-all duration-500"
+                className="relative bg-gray-800/40 w-full h-full backdrop-blur-lg border border-white/10 rounded-2xl overflow-hidden hover:-translate-y-1 hover:shadow-amber-400/20 transition-all duration-500"
               >
                 <div className="relative w-full h-52 overflow-hidden">
                   <Image
@@ -109,7 +115,7 @@ export default function Projects() {
                     } w-full h-full opacity-90 hover:opacity-100 transition`}
                   />
                 </div>
-                <div className="p-6 flex flex-col justify-between h-[230px]">
+                <div className="p-6 flex flex-col justify-between min-h-[230px]">
                   <div>
                     <h3 className="text-xl font-semibold text-white mb-2">
                       {project.title}
@@ -138,6 +144,7 @@ export default function Projects() {
                     <a
                       href={project.link}
                       target="_blank"
+                      onClick={(e) => e.stopPropagation()}
                       className="flex items-center gap-1 text-amber-400 hover:underline"
                     >
                       <ExternalLink size={16} /> Live
@@ -146,6 +153,7 @@ export default function Projects() {
                       <a
                         href={project.source}
                         target="_blank"
+                        onClick={(e) => e.stopPropagation()}
                         className="flex items-center gap-1 text-gray-400 hover:text-gray-200"
                       >
                         <Github size={16} /> Code
@@ -158,15 +166,13 @@ export default function Projects() {
                   </div>
                 </div>
               </motion.div>
-            </a>
+            </div>
           ))}
         </AnimatePresence>
       </motion.div>
 
       {/* Pagination for mobile */}
-      {typeof window !== "undefined" &&
-        window.innerWidth < 640 &&
-        totalPages > 1 && (
+      {isMobile && totalPages > 1 && (
           <div className="flex justify-center items-center gap-4 mt-10">
             <button
               type="button"

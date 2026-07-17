@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import { SocialIcon } from "react-social-icons";
+import { AiOutlineMail } from "react-icons/ai";
 import Link from "next/link";
 
 type Props = {};
@@ -48,17 +48,15 @@ export default function Header({}: Props) {
           scale: 1,
         }}
       >
-        <Link href="mailto:demiladeala@gmail.com ">
-          <SocialIcon
-            className=" cursor-pointer"
-            network="email"
-            fgColor="white"
-            bgColor="transparent"
-          />
-          <p className=" cursor-pointer hidden md:inline-flex text-sm text-gray-200">
+        <a
+          href="mailto:demiladeala@gmail.com"
+          className="flex items-center gap-2 cursor-pointer"
+        >
+          <AiOutlineMail size={24} className="text-gray-200" />
+          <p className="cursor-pointer hidden md:inline-flex text-sm text-gray-200">
             Let's Chat
           </p>
-        </Link>
+        </a>
       </motion.div>
     </header>
   );

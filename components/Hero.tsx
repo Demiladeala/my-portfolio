@@ -1,10 +1,7 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
-import Typed from "react-typed";
 import Link from "next/link";
-import heroimage from "../public/demmy.jpg";
 
 type Props = {};
 
@@ -31,43 +28,61 @@ export default function Hero({}: Props) {
         transition={{ duration: 6, repeat: Infinity }}
       />
 
-      {/* Profile Image */}
+      {/* Animated engineer visual (replaces profile photo) */}
       <motion.div
-        initial={{ scale: 0.9 }}
-        animate={{ scale: 1 }}
+        initial={{ scale: 0.9, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 1 }}
-        className="relative z-10 mb-8 max-md:mt-12"
+        className="relative z-10 mb-8 max-md:mt-12 w-[180px] h-[180px] flex items-center justify-center"
       >
-        <Image
-          src={heroimage}
-          alt="Oluwademilade Ala - Software Engineer"
-          width={180}
-          height={180}
-          priority
-          className="rounded-full border-4 border-amber-400 shadow-lg shadow-amber-500/20 object-cover"
-        />
+        {/* Rotating gradient ring */}
+        <motion.div
+          animate={{ rotate: 360 }}
+          transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
+          className="absolute inset-0 rounded-full p-[3px] bg-[conic-gradient(from_0deg,#fbbf24,#ec4899,#a855f7,#fbbf24)]"
+        >
+          <div className="w-full h-full rounded-full bg-[#15151a]" />
+        </motion.div>
+
+        {/* Counter-rotating dashed orbit */}
+        <motion.div
+          animate={{ rotate: -360 }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+          className="absolute inset-4 rounded-full border border-dashed border-amber-400/40"
+        >
+          <span className="absolute -top-1 left-1/2 w-2 h-2 rounded-full bg-amber-400 shadow-[0_0_8px_rgba(251,191,36,0.8)]" />
+          <span className="absolute top-1/2 -right-1 w-2 h-2 rounded-full bg-pink-500 shadow-[0_0_8px_rgba(236,72,153,0.8)]" />
+          <span className="absolute -bottom-1 left-1/3 w-2 h-2 rounded-full bg-purple-500 shadow-[0_0_8px_rgba(168,85,247,0.8)]" />
+        </motion.div>
+
+        {/* Glowing core */}
+        <motion.div
+          animate={{ scale: [1, 1.06, 1] }}
+          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+          className="relative z-10 w-24 h-24 rounded-full bg-gradient-to-tr from-gray-800 to-gray-700 border border-white/10 flex items-center justify-center shadow-lg shadow-amber-500/20"
+        >
+          <span className="text-3xl font-bold bg-gradient-to-r from-amber-400 via-pink-400 to-purple-400 bg-clip-text text-transparent">
+            {"</>"}
+          </span>
+        </motion.div>
       </motion.div>
 
-      {/* Name & Title */}
+      {/* Name & Headline */}
       <div className="relative z-10">
-        <h1 className="text-2xl sm:text-4xl font-bold text-white mb-3">
-          <Typed
-            strings={[
-              "Hi, I'm Oluwademilade 👋",
-              "I'm a Software Engineer",
-              "A lifelong Innovator",
-            ]}
-            typeSpeed={70}
-            backSpeed={40}
-            loop
-          />
+        <p className="text-amber-400 text-sm sm:text-base font-medium tracking-widest uppercase mb-3">
+          Oluwademilade Ala — Frontend Engineer
+        </p>
+
+        <h1 className="text-2xl sm:text-4xl font-bold text-white mb-3 max-w-3xl mx-auto leading-tight">
+          I build e-commerce storefronts and dashboards that ship in{" "}
+          <span className="text-amber-400">weeks, not months.</span>
         </h1>
 
         <p className="text-gray-300 text-base sm:text-lg max-w-xl mx-auto mt-4">
-          Results-driven engineer with a passion for developing
-          high-performance, scalable web and mobile applications. Skilled at
-          solving complex technical challenges through clean, efficient, and
-          modern coding practices that deliver measurable value.
+          Frontend engineer. React, Next.js, TypeScript. 20+ shipped products
+          including multi-vendor stores, booking platforms, and admin
+          dashboards. I work with agencies and founders in the US, UK, and
+          Europe.
         </p>
       </div>
 
