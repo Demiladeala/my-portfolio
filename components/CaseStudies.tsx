@@ -79,8 +79,8 @@ const caseStudies: CaseStudy[] = [
     result:
       "Live stores run on it right now, real customers checking out on storefronts I engineered.",
     stack: ["React", "Next.js", "TypeScript", "Tailwind"],
-    image: "/zent-storefront.png",
-    imageAlt: "Zent storefront — demo store",
+    image: "/case-storefront.png",
+    imageAlt: "Zent storefront — demo store homepage",
     links: [
       {
         label: "Demo store",
