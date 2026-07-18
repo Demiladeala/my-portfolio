@@ -11,6 +11,7 @@ type CaseStudy = {
   context: string;
   built: string[];
   engineering?: string[];
+  hardestProblem?: { title: string; body: string };
   result: string;
   stack: string[];
   image?: string;
@@ -48,7 +49,11 @@ const caseStudies: CaseStudy[] = [
     image: "/zent-vendor.png",
     imageAlt: "Zent vendor dashboard — products view (demo store)",
     links: [
-      { label: "joinzent.com", href: "https://www.joinzent.com/", icon: "live" },
+      {
+        label: "joinzent.com",
+        href: "https://www.joinzent.com/",
+        icon: "live",
+      },
       {
         label: "Demo store",
         href: "https://demilade.zentstore.com/",
@@ -67,6 +72,10 @@ const caseStudies: CaseStudy[] = [
       "Currently building the marketplace storefront end-to-end",
       "Performance-first approach: fast loads, skeleton states, mobile-first — because storefront speed converts directly to sales",
     ],
+    hardestProblem: {
+      title: "The hardest problem: one app, every store, no flash.",
+      body: "Every merchant's storefront — subdomain or custom domain — is served by a single Next.js codebase that has to figure out which store you're visiting on every request. I built the tenant resolution and SSR hydration layer: the server identifies the merchant from the hostname, fetches their store data, theme, and template in parallel, and pre-seeds the client-side cache before first paint — so shoppers land on a fully branded store instantly, with no logo flash, no skeleton pop, and no client-side fetch waterfall. Not-found, suspended, and maintenance states are all resolved server-side too.",
+    },
     result:
       "Live stores run on it right now — real customers checking out on storefronts I engineered.",
     stack: ["React", "Next.js", "TypeScript", "Tailwind"],
@@ -83,9 +92,10 @@ const caseStudies: CaseStudy[] = [
   {
     id: "transaction-monitoring",
     eyebrow: "Case Study 03 — Open Source",
-    title: "A fintech-grade transaction monitoring dashboard, architected to scale",
+    title:
+      "A fintech-grade transaction monitoring dashboard, architected to scale",
     context:
-      "Fintech and payments teams need to spot risky transactions fast. I built a complete transaction monitoring interface — the kind of tool a compliance or operations team would live in all day — as a demonstration of how I architect production frontend applications.",
+      "Fintech and payments teams need to spot risky transactions fast. I built a complete transaction monitoring interface — the kind of tool a compliance or operations team would live in all day, as a demonstration of how I architect production frontend applications.",
     built: [
       "Authentication flow with validation, loading and error states",
       "KPI dashboard: total transactions, flagged transactions, customers, and risk score summary with charts",
@@ -100,7 +110,7 @@ const caseStudies: CaseStudy[] = [
       "Fully responsive, typed end-to-end with TypeScript",
     ],
     result:
-      "Open source with a documented architecture — clients can read exactly how I think before hiring me. It's also my answer when a client asks \"can I see your code?\"",
+      'Open source with a documented architecture — clients can read exactly how I think before hiring me. It\'s also my answer when a client asks "can I see your code?"',
     stack: [
       "Next.js (App Router)",
       "TypeScript",
@@ -256,6 +266,17 @@ export default function CaseStudies() {
                   </div>
                 )}
               </div>
+
+              {study.hardestProblem && (
+                <div className="mt-8 p-5 sm:p-6 rounded-2xl bg-gradient-to-br from-amber-400/10 to-pink-500/5 border border-amber-400/20">
+                  <h4 className="text-amber-400 font-semibold mb-2">
+                    {study.hardestProblem.title}
+                  </h4>
+                  <p className="text-gray-200 text-sm sm:text-base leading-relaxed">
+                    {study.hardestProblem.body}
+                  </p>
+                </div>
+              )}
 
               <div className="mt-8 p-5 rounded-2xl bg-gray-900/60 border border-white/5">
                 <p className="text-gray-200 text-sm sm:text-base leading-relaxed">
