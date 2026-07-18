@@ -14,9 +14,9 @@ module.exports = {
         muted: "#6E6A63",
         line: "#E8E5DF",
         accent: {
-          DEFAULT: "#C2551E",
-          dark: "#A64715",
-          tint: "#FBF1EA",
+          DEFAULT: "#1D4ED8",
+          dark: "#1E40AF",
+          tint: "#EEF3FE",
         },
       },
       fontFamily: {
