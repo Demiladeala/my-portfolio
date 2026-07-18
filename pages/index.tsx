@@ -22,6 +22,7 @@ import Footer from "../components/Footer";
 import Portfolio from "../components/Portfolio";
 import Contact from "../components/Contact";
 import WorkWithMe from "../components/WorkWithMe";
+import CaseStudies from "../components/CaseStudies";
 
 const textVariants = {
   start: { color: "orange" },
@@ -188,6 +189,10 @@ export default function Home() {
 
           <section id="hero" className=" snap-start">
             <Hero />
+          </section>
+
+          <section id="case-studies" className="snap-start">
+            <CaseStudies />
           </section>
 
           <section id="work-with-me" className="snap-center">

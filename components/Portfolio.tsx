@@ -19,6 +19,7 @@ export default function Projects() {
   const [active, setActive] = useState("All");
   const [page, setPage] = useState(1);
   const [isMobile, setIsMobile] = useState(false);
+  const [expanded, setExpanded] = useState(false);
   const perPage = 5;
 
   React.useEffect(() => {
@@ -49,17 +50,42 @@ export default function Projects() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="text-center text-3xl sm:text-4xl font-bold text-white mb-12"
+        className="text-center text-3xl sm:text-4xl font-bold text-white mb-4"
       >
-        My Projects 🚀
+        More Projects 🚀
       </motion.h2>
 
+      <motion.p
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="text-center text-gray-400 text-base sm:text-lg mb-8 max-w-2xl mx-auto"
+      >
+        Everything else I&apos;ve shipped — {projects.length} projects across
+        web apps, dashboards, mobile, and more.
+      </motion.p>
+
+      {!expanded && (
+        <div className="flex justify-center">
+          <button
+            type="button"
+            onClick={() => setExpanded(true)}
+            className="px-8 py-3 rounded-full border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-black font-medium transition-all duration-300"
+          >
+            Show all {projects.length} projects
+          </button>
+        </div>
+      )}
+
+      {expanded && (
+      <>
       {/* Category Tabs */}
       <motion.div
         className="flex flex-wrap justify-center gap-3 mb-16"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.3 }}
+        transition={{ delay: 0.1 }}
       >
         {categories.map((cat) => (
           <button
@@ -195,6 +221,18 @@ export default function Projects() {
             </button>
           </div>
         )}
+
+      <div className="flex justify-center mt-12">
+        <button
+          type="button"
+          onClick={() => setExpanded(false)}
+          className="px-6 py-2 rounded-full border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 text-sm transition-all duration-300"
+        >
+          Hide projects
+        </button>
+      </div>
+      </>
+      )}
     </section>
   );
 }

@@ -74,26 +74,37 @@ export default function Hero({}: Props) {
         </p>
 
         <h1 className="text-2xl sm:text-4xl font-bold text-white mb-3 max-w-3xl mx-auto leading-tight">
-          I build e-commerce storefronts and dashboards that ship in{" "}
-          <span className="text-amber-400">weeks, not months.</span>
+          I build fast,{" "}
+          <span className="text-amber-400">conversion-focused</span>{" "}
+          storefronts and dashboards.
         </h1>
 
-        <p className="text-gray-300 text-base sm:text-lg max-w-xl mx-auto mt-4">
-          Frontend engineer. React, Next.js, TypeScript. 20+ shipped products
-          including multi-vendor stores, booking platforms, and admin
-          dashboards. I work with agencies and founders in the US, UK, and
-          Europe.
+        <p className="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto mt-4">
+          Frontend engineer behind the vendor dashboard and marketplace
+          storefront of a fast-growing e-commerce platform — merchants run
+          their entire businesses on interfaces I built. React · Next.js ·
+          TypeScript. Pages load in about a second, because slow stores lose
+          sales.
         </p>
       </div>
 
       {/* Buttons */}
       <div className="flex flex-wrap justify-center gap-4 mt-10 relative z-10">
-        <Link href="#about">
+        <Link href="#case-studies">
           <motion.button
             whileHover={{ scale: 1.05 }}
-            className="px-6 py-2 text-sm sm:text-base font-medium rounded-full border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-black transition-all"
+            className="px-7 py-2.5 text-sm sm:text-base font-bold rounded-full bg-amber-400 text-black hover:bg-amber-300 shadow-lg shadow-amber-500/20 transition-all"
           >
-            About
+            See how I work
+          </motion.button>
+        </Link>
+
+        <Link href="mailto:demiladeala@gmail.com?subject=Project%20inquiry">
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            className="px-7 py-2.5 text-sm sm:text-base font-medium rounded-full border border-gray-300 text-gray-300 hover:bg-gray-300 hover:text-black transition-all"
+          >
+            Email me
           </motion.button>
         </Link>
 
@@ -103,27 +114,9 @@ export default function Hero({}: Props) {
         >
           <motion.button
             whileHover={{ scale: 1.05 }}
-            className="px-6 py-2 text-sm sm:text-base font-medium rounded-full border border-gray-300 text-gray-300 hover:bg-gray-300 hover:text-black transition-all"
+            className="px-7 py-2.5 text-sm sm:text-base font-medium rounded-full border border-white/20 text-gray-400 hover:border-gray-300 hover:text-gray-200 transition-all"
           >
             Resume
-          </motion.button>
-        </Link>
-
-        <Link href="#portfolio">
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            className="px-6 py-2 text-sm sm:text-base font-medium rounded-full border border-pink-500 text-pink-400 hover:bg-pink-500 hover:text-white transition-all"
-          >
-            Projects 📁
-          </motion.button>
-        </Link>
-
-        <Link href="#contact">
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            className="px-6 py-2 text-sm sm:text-base font-medium rounded-full border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-black transition-all"
-          >
-            Contact
           </motion.button>
         </Link>
       </div>

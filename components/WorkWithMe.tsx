@@ -63,6 +63,55 @@ export default function WorkWithMe({}: Props) {
         </motion.div>
       </div>
 
+      {/* What I'm best at */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9 }}
+        viewport={{ once: true }}
+        className="relative z-10 max-w-5xl mx-auto mt-12"
+      >
+        <h3 className="text-center text-xl sm:text-2xl font-semibold text-white mb-6">
+          What I&apos;m best at
+        </h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {[
+            "E-commerce storefronts & landing pages (Next.js)",
+            "Admin dashboards & internal tools",
+            "Payment integrations (Stripe, Paystack, Flutterwave)",
+            "Performance rescue: making slow React sites fast",
+          ].map((service) => (
+            <div
+              key={service}
+              className="bg-gray-800/40 backdrop-blur-lg border border-white/10 rounded-2xl p-5 text-gray-200 text-sm sm:text-base leading-relaxed text-center hover:border-amber-400/40 transition-all duration-500"
+            >
+              {service}
+            </div>
+          ))}
+        </div>
+      </motion.div>
+
+      {/* How I work */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9 }}
+        viewport={{ once: true }}
+        className="relative z-10 max-w-3xl mx-auto mt-12"
+      >
+        <div className="bg-gray-900/60 border border-white/10 rounded-2xl p-6 sm:p-8 border-l-4 border-l-amber-400">
+          <h3 className="text-xl sm:text-2xl font-semibold text-white mb-3">
+            How I work
+          </h3>
+          <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
+            Clear communication, daily updates if you want them, and I ship in
+            small reviewable pieces — no month-long silence then a big reveal.
+            I record short Loom walkthroughs of everything I deliver so you
+            always know what you got.
+          </p>
+        </div>
+      </motion.div>
+
       {/* CTA */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
