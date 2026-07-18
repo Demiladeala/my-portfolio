@@ -46,8 +46,8 @@ const caseStudies: CaseStudy[] = [
       "Tailwind",
       "Paystack / Stripe / Flutterwave / Nomba APIs",
     ],
-    image: "/zent-vendor.png",
-    imageAlt: "Zent vendor dashboard — products view (demo store)",
+    image: "/case-vendor-dashboard.png",
+    imageAlt: "Zent vendor dashboard — overview with sales, orders, and payouts",
     links: [
       {
         label: "joinzent.com",
@@ -80,7 +80,7 @@ const caseStudies: CaseStudy[] = [
       "Live stores run on it right now, real customers checking out on storefronts I engineered.",
     stack: ["React", "Next.js", "TypeScript", "Tailwind"],
     image: "/case-storefront.png",
-    imageAlt: "Zent storefront — demo store homepage",
+    imageAlt: "Zent marketplace storefront — live store homepage",
     links: [
       {
         label: "Demo store",
