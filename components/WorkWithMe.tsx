@@ -93,9 +93,9 @@ export default function WorkWithMe({}: Props) {
           </h3>
           <p className="text-ink/85 text-base sm:text-lg leading-relaxed max-w-3xl">
             Clear communication, daily updates if you want them, and I ship in
-            small reviewable pieces — no month-long silence then a big reveal.
-            I record short Loom walkthroughs of everything I deliver so you
-            always know what you got.
+            small reviewable pieces, no month-long silence then a big reveal. I
+            record short Loom walkthroughs of everything I deliver so you always
+            know what you got.
           </p>
         </motion.div>
 
@@ -112,7 +112,7 @@ export default function WorkWithMe({}: Props) {
             className="flex items-center gap-3 px-7 py-3.5 bg-accent text-white font-medium rounded-lg hover:bg-accent-dark transition-colors"
           >
             <AiOutlineMail size={20} />
-            Email me — I reply within 24 hours
+            Email me. I reply within 24 hours
           </a>
 
           <p className="flex items-center gap-2 text-muted text-sm sm:text-base">

@@ -31,7 +31,7 @@ export default function Contact() {
           </h2>
           <p className="text-muted text-base sm:text-lg leading-relaxed mt-4 mb-10">
             I&apos;m open to full-time roles, collaborations, or freelance
-            projects. Tell me what you&apos;re building — I reply within 24
+            projects. Tell me what you&apos;re building. I reply within 24
             hours.
           </p>
 

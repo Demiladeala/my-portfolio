@@ -54,7 +54,7 @@ export default function Projects() {
         </motion.h2>
 
         <p className="text-center text-muted text-base sm:text-lg mt-4 mb-10 max-w-2xl mx-auto">
-          Everything else I&apos;ve shipped — {projects.length} projects across
+          Everything else I&apos;ve shipped, {projects.length} projects across
           web apps, dashboards, mobile, and more.
         </p>
 

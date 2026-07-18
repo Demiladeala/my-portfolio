@@ -22,14 +22,14 @@ export default function About({}: Props) {
           <div className="text-ink/85 text-lg leading-relaxed space-y-6">
             <p>
               I specialize in building performant software with React, React
-              Native, TypeScript, and Next.js — storefronts, dashboards, and
-              the systems behind them.
+              Native, TypeScript, and Next.js storefronts, dashboards, and the
+              systems behind them.
             </p>
             <p>
               I thrive on solving challenging problems, designing intuitive
               interfaces, and collaborating with teams to bring bold ideas to
-              life. My goal is to craft software that&apos;s not only
-              functional but delightful to use.
+              life. My goal is to craft software that&apos;s not only functional
+              but delightful to use.
             </p>
           </div>
         </motion.div>
