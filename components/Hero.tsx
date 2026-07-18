@@ -23,7 +23,7 @@ export default function Hero({}: Props) {
 
         <p className="text-muted text-lg sm:text-xl leading-relaxed max-w-2xl mt-7">
           Frontend engineer behind the vendor dashboard and marketplace
-          storefront of a fast-growing e-commerce platform, merchants run their
+          storefront of a fast-growing e-commerce platform. Merchants run their
           entire businesses on interfaces I built. React · Next.js · TypeScript.
           Pages load in about a second, because slow stores lose sales.
         </p>
