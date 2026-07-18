@@ -13,7 +13,7 @@ export const projects = [
   },
   {
     id: "2",
-    image: "/zent-vendor.png",
+    image: "/case-vendor-dashboard.png",
     title: "Zentstores Vendor Dashboard",
     description:
       "Merchants needed one place to run their store without spreadsheets. I built the dashboard they work in daily — sales analytics, inventory control, order management, and customer insights, updating in real time. Next.js, TypeScript, Redux Toolkit, shadcn/ui. One screen replaces the whole back office.",
