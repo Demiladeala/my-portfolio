@@ -7,9 +7,23 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        paper: "#FAF9F7",
+        surface: "#FFFFFF",
+        ink: "#1C1B18",
+        muted: "#6E6A63",
+        line: "#E8E5DF",
+        accent: {
+          DEFAULT: "#C2551E",
+          dark: "#A64715",
+          tint: "#FBF1EA",
+        },
+      },
+      fontFamily: {
+        sans: ["Inter", "system-ui", "sans-serif"],
+        display: ["'Space Grotesk'", "Inter", "sans-serif"],
+      },
     },
   },
-  plugins: [
-    require('tailwind-scrollbar'),
-  ],
-}
+  plugins: [],
+};

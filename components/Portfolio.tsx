@@ -41,198 +41,182 @@ export default function Projects() {
   const prevPage = () => setPage((p) => (p > 1 ? p - 1 : p));
 
   return (
-    <section
-      id="projects"
-      className="relative w-full py-24 px-6 sm:px-12 overflow-hidden bg-gradient-to-b from-black via-gray-900 to-gray-950"
-    >
-      <motion.h2
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-        className="text-center text-3xl sm:text-4xl font-bold text-white mb-4"
-      >
-        More Projects 🚀
-      </motion.h2>
+    <div className="border-t border-line bg-surface">
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 py-20 sm:py-28">
+        <motion.h2
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="text-center font-display text-3xl sm:text-4xl font-bold tracking-tight"
+        >
+          More projects
+        </motion.h2>
 
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-        className="text-center text-gray-400 text-base sm:text-lg mb-8 max-w-2xl mx-auto"
-      >
-        Everything else I&apos;ve shipped — {projects.length} projects across
-        web apps, dashboards, mobile, and more.
-      </motion.p>
+        <p className="text-center text-muted text-base sm:text-lg mt-4 mb-10 max-w-2xl mx-auto">
+          Everything else I&apos;ve shipped — {projects.length} projects across
+          web apps, dashboards, mobile, and more.
+        </p>
 
-      {!expanded && (
-        <div className="flex justify-center">
-          <button
-            type="button"
-            onClick={() => setExpanded(true)}
-            className="px-8 py-3 rounded-full border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-black font-medium transition-all duration-300"
-          >
-            Show all {projects.length} projects
-          </button>
-        </div>
-      )}
-
-      {expanded && (
-      <>
-      {/* Category Tabs */}
-      <motion.div
-        className="flex flex-wrap justify-center gap-3 mb-16"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.1 }}
-      >
-        {categories.map((cat) => (
-          <button
-            type="button"
-            key={cat}
-            onClick={() => {
-              setActive(cat);
-              setPage(1);
-            }}
-            className={`px-4 py-2 text-xs sm:text-base rounded-full border transition-all duration-300 
-              ${
-                active === cat
-                  ? "bg-amber-400 text-black border-amber-400"
-                  : "border-gray-600 text-gray-300 hover:border-amber-400 hover:text-amber-400"
-              }`}
-          >
-            {cat}
-          </button>
-        ))}
-      </motion.div>
-
-      {/* Projects Grid */}
-      <motion.div
-        layout
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto"
-      >
-        <AnimatePresence>
-          {displayed.map((project) => (
-            <div
-              key={project.id}
-              onClick={() => window.open(project.link, "_blank")}
-              className="w-full flex items-stretch gap-1 cursor-pointer"
-            >
-              <motion.div
-                key={project.id}
-                layout
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -30 }}
-                transition={{ duration: 0.6 }}
-                className="relative bg-gray-800/40 w-full h-full backdrop-blur-lg border border-white/10 rounded-2xl overflow-hidden hover:-translate-y-1 hover:shadow-amber-400/20 transition-all duration-500"
-              >
-                <div className="relative w-full h-52 overflow-hidden">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    width={600}
-                    height={400}
-                    className={`${
-                      project.contain
-                        ? "object-contain bg-gray-900"
-                        : "object-cover"
-                    } w-full h-full opacity-90 hover:opacity-100 transition`}
-                  />
-                </div>
-                <div className="p-6 flex flex-col justify-between min-h-[230px]">
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">
-                      {project.title}
-                    </h3>
-                    <p className="text-gray-400 text-sm leading-relaxed">
-                      {project.description}
-                    </p>
-                  </div>
-
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {project?.tech?.length ? (
-                      project.tech.map((t, i) => (
-                        <span
-                          key={i}
-                          className="px-2 py-1 text-xs rounded-full bg-gray-700 text-gray-300"
-                        >
-                          {t}
-                        </span>
-                      ))
-                    ) : (
-                      <span className="text-gray-500 text-xs"></span>
-                    )}
-                  </div>
-
-                  <div className="mt-5 flex gap-4">
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      onClick={(e) => e.stopPropagation()}
-                      className="flex items-center gap-1 text-amber-400 hover:underline"
-                    >
-                      <ExternalLink size={16} /> Live
-                    </a>
-                    {project.source ? (
-                      <a
-                        href={project.source}
-                        target="_blank"
-                        onClick={(e) => e.stopPropagation()}
-                        className="flex items-center gap-1 text-gray-400 hover:text-gray-200"
-                      >
-                        <Github size={16} /> Code
-                      </a>
-                    ) : (
-                      <span className="flex items-center gap-1 text-gray-600 cursor-not-allowed opacity-50">
-                        <Github size={16} /> Code
-                      </span>
-                    )}
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          ))}
-        </AnimatePresence>
-      </motion.div>
-
-      {/* Pagination for mobile */}
-      {isMobile && totalPages > 1 && (
-          <div className="flex justify-center items-center gap-4 mt-10">
+        {!expanded && (
+          <div className="flex justify-center">
             <button
               type="button"
-              onClick={prevPage}
-              disabled={page === 1}
-              className="px-3 py-1 border border-gray-600 text-gray-300 rounded-md disabled:opacity-40"
+              onClick={() => setExpanded(true)}
+              className="px-7 py-3 rounded-lg border border-line font-medium text-ink hover:border-ink transition-colors"
             >
-              Prev
-            </button>
-            <span className="text-gray-400 text-sm">
-              {page} / {totalPages}
-            </span>
-            <button
-              type="button"
-              onClick={nextPage}
-              disabled={page === totalPages}
-              className="px-3 py-1 border border-gray-600 text-gray-300 rounded-md disabled:opacity-40"
-            >
-              Next
+              Show all {projects.length} projects
             </button>
           </div>
         )}
 
-      <div className="flex justify-center mt-12">
-        <button
-          type="button"
-          onClick={() => setExpanded(false)}
-          className="px-6 py-2 rounded-full border border-gray-600 text-gray-400 hover:border-gray-400 hover:text-gray-200 text-sm transition-all duration-300"
-        >
-          Hide projects
-        </button>
+        {expanded && (
+          <>
+            {/* Category Tabs */}
+            <div className="flex flex-wrap justify-center gap-2.5 mb-14">
+              {categories.map((cat) => (
+                <button
+                  type="button"
+                  key={cat}
+                  onClick={() => {
+                    setActive(cat);
+                    setPage(1);
+                  }}
+                  className={`px-4 py-2 text-xs sm:text-sm rounded-full border transition-colors duration-200
+                    ${
+                      active === cat
+                        ? "bg-ink text-paper border-ink"
+                        : "border-line text-muted hover:border-ink hover:text-ink"
+                    }`}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
+
+            {/* Projects Grid */}
+            <motion.div
+              layout
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+            >
+              <AnimatePresence>
+                {displayed.map((project) => (
+                  <div
+                    key={project.id}
+                    onClick={() => window.open(project.link, "_blank")}
+                    className="w-full flex items-stretch cursor-pointer"
+                  >
+                    <motion.div
+                      key={project.id}
+                      layout
+                      initial={{ opacity: 0, y: 16 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -16 }}
+                      transition={{ duration: 0.4 }}
+                      className="relative bg-paper w-full h-full border border-line rounded-2xl overflow-hidden hover:shadow-md hover:shadow-ink/5 hover:-translate-y-0.5 transition-all duration-300"
+                    >
+                      <div className="relative w-full h-48 overflow-hidden border-b border-line">
+                        <Image
+                          src={project.image}
+                          alt={project.title}
+                          width={600}
+                          height={400}
+                          className={`${
+                            project.contain
+                              ? "object-contain bg-surface"
+                              : "object-cover"
+                          } w-full h-full`}
+                        />
+                      </div>
+                      <div className="p-6 flex flex-col justify-between min-h-[220px]">
+                        <div>
+                          <h3 className="font-display text-lg font-bold mb-2">
+                            {project.title}
+                          </h3>
+                          <p className="text-muted text-sm leading-relaxed">
+                            {project.description}
+                          </p>
+                        </div>
+
+                        <div className="mt-4 flex flex-wrap gap-2">
+                          {project?.tech?.length ? (
+                            project.tech.map((t, i) => (
+                              <span
+                                key={i}
+                                className="px-2.5 py-1 text-xs rounded-full border border-line text-muted"
+                              >
+                                {t}
+                              </span>
+                            ))
+                          ) : (
+                            <span className="text-muted text-xs"></span>
+                          )}
+                        </div>
+
+                        <div className="mt-5 flex gap-5">
+                          <a
+                            href={project.link}
+                            target="_blank"
+                            onClick={(e) => e.stopPropagation()}
+                            className="flex items-center gap-1.5 text-accent hover:text-accent-dark font-medium text-sm transition-colors"
+                          >
+                            <ExternalLink size={15} /> Live
+                          </a>
+                          {project.source ? (
+                            <a
+                              href={project.source}
+                              target="_blank"
+                              onClick={(e) => e.stopPropagation()}
+                              className="flex items-center gap-1.5 text-muted hover:text-ink font-medium text-sm transition-colors"
+                            >
+                              <Github size={15} /> Code
+                            </a>
+                          ) : null}
+                        </div>
+                      </div>
+                    </motion.div>
+                  </div>
+                ))}
+              </AnimatePresence>
+            </motion.div>
+
+            {/* Pagination for mobile */}
+            {isMobile && totalPages > 1 && (
+              <div className="flex justify-center items-center gap-4 mt-10">
+                <button
+                  type="button"
+                  onClick={prevPage}
+                  disabled={page === 1}
+                  className="px-3 py-1.5 border border-line text-muted rounded-lg disabled:opacity-40"
+                >
+                  Prev
+                </button>
+                <span className="text-muted text-sm">
+                  {page} / {totalPages}
+                </span>
+                <button
+                  type="button"
+                  onClick={nextPage}
+                  disabled={page === totalPages}
+                  className="px-3 py-1.5 border border-line text-muted rounded-lg disabled:opacity-40"
+                >
+                  Next
+                </button>
+              </div>
+            )}
+
+            <div className="flex justify-center mt-12">
+              <button
+                type="button"
+                onClick={() => setExpanded(false)}
+                className="px-6 py-2 rounded-lg border border-line text-muted hover:text-ink hover:border-ink text-sm transition-colors"
+              >
+                Hide projects
+              </button>
+            </div>
+          </>
+        )}
       </div>
-      </>
-      )}
-    </section>
+    </div>
   );
 }

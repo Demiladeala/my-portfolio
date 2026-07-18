@@ -1,26 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-*{
-    font-family: 'Poppins', sans-serif;
-}
-@media (max-width:360px) {
-    .ltext{
-        font-size: small;
-        letter-spacing: 1px;
-    }
-}
-@layer components{
-    .heroButton{
-        @apply px-6 py-2 border-b-[#202020] rounded-lg border-b text-xs sm:text-sm md:text-base text-gray-400 transition-all hover:text-orange-400/40 border-b-orange-400/40  m-auto
-    }
-    .contactInput{
-        @apply outline-none bg-gray-100/30 rounded-sm px-6 py-4 text-gray-300 placeholder-gray-100  focus:text-orange-400/70
-    }
-}
-body{
-    -webkit-tap-highlight-color: transparent;
-    font-family: 'Poppins', sans-serif;
+
+body {
+  -webkit-tap-highlight-color: transparent;
+  @apply bg-paper text-ink antialiased;
 }
 
+::selection {
+  @apply bg-accent/15;
+}
+
+@layer components {
+  .contactInput {
+    @apply w-full outline-none bg-surface border border-line rounded-lg px-5 py-3.5 text-ink placeholder-muted/70 transition-colors duration-200 focus:border-accent;
+  }
+}

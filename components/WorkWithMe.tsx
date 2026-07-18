@@ -5,140 +5,125 @@ import { AiOutlineMail } from "react-icons/ai";
 
 type Props = {};
 
+const services = [
+  "E-commerce storefronts & landing pages (Next.js)",
+  "Admin dashboards & internal tools",
+  "Payment integrations (Stripe, Paystack, Flutterwave)",
+  "Performance rescue: making slow React sites fast",
+];
+
 export default function WorkWithMe({}: Props) {
   return (
-    <section className="relative w-full py-20 px-6 sm:px-12 overflow-hidden bg-gradient-to-b from-gray-800 via-gray-900 to-black">
-      {/* Floating gradient orb */}
-      <motion.div
-        className="absolute -top-10 right-10 w-72 h-72 bg-gradient-to-tr from-amber-400 via-pink-500 to-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"
-        animate={{ y: [0, 20, 0] }}
-        transition={{ duration: 6, repeat: Infinity }}
-      />
-
-      <motion.h2
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-        className="relative z-10 text-center text-3xl sm:text-4xl font-bold text-white mb-12"
-      >
-        Work With Me /{">"}
-      </motion.h2>
-
-      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-        {/* Agencies card */}
-        <motion.div
-          initial={{ opacity: 0, x: -60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.9 }}
+    <div className="border-t border-line">
+      <div className="max-w-5xl mx-auto px-6 sm:px-8 py-20 sm:py-28">
+        <motion.h2
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="bg-gray-800/40 backdrop-blur-lg border border-white/10 rounded-2xl p-8 hover:border-amber-400/40 transition-all duration-500"
+          className="font-display text-3xl sm:text-4xl font-bold tracking-tight"
         >
-          <h3 className="text-xl sm:text-2xl font-semibold text-amber-400 mb-4">
-            For agencies
-          </h3>
-          <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
-            I take on white-label builds. You send the Figma, I return
-            production-ready code. Your clients never know I exist. Typical
-            turnaround: 1–3 weeks depending on scope.
-          </p>
+          Work with me
+        </motion.h2>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12"
+        >
+          <div className="bg-surface border border-line rounded-2xl p-7 sm:p-8">
+            <h3 className="font-display text-lg sm:text-xl font-bold mb-3">
+              For agencies
+            </h3>
+            <p className="text-ink/85 text-base sm:text-lg leading-relaxed">
+              I take on white-label builds. You send the Figma, I return
+              production-ready code. Your clients never know I exist. Typical
+              turnaround: 1–3 weeks depending on scope.
+            </p>
+          </div>
+
+          <div className="bg-surface border border-line rounded-2xl p-7 sm:p-8">
+            <h3 className="font-display text-lg sm:text-xl font-bold mb-3">
+              For founders
+            </h3>
+            <p className="text-ink/85 text-base sm:text-lg leading-relaxed">
+              I build MVPs and storefronts fast, using modern tooling and
+              AI-assisted workflows, so you can launch and test without a full
+              dev team.
+            </p>
+          </div>
         </motion.div>
 
-        {/* Founders card */}
+        {/* What I'm best at */}
         <motion.div
-          initial={{ opacity: 0, x: 60 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.9 }}
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="bg-gray-800/40 backdrop-blur-lg border border-white/10 rounded-2xl p-8 hover:border-pink-500/40 transition-all duration-500"
+          className="mt-14"
         >
-          <h3 className="text-xl sm:text-2xl font-semibold text-pink-400 mb-4">
-            For founders
+          <h3 className="font-semibold text-sm tracking-widest uppercase text-muted mb-5">
+            What I&apos;m best at
           </h3>
-          <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
-            I build MVPs and storefronts fast, using modern tooling and
-            AI-assisted workflows, so you can launch and test without a full dev
-            team.
-          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {services.map((service) => (
+              <div
+                key={service}
+                className="flex items-center gap-3 bg-surface border border-line rounded-xl px-5 py-4 text-ink/85 text-sm sm:text-base"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
+                {service}
+              </div>
+            ))}
+          </div>
         </motion.div>
-      </div>
 
-      {/* What I'm best at */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9 }}
-        viewport={{ once: true }}
-        className="relative z-10 max-w-5xl mx-auto mt-12"
-      >
-        <h3 className="text-center text-xl sm:text-2xl font-semibold text-white mb-6">
-          What I&apos;m best at
-        </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {[
-            "E-commerce storefronts & landing pages (Next.js)",
-            "Admin dashboards & internal tools",
-            "Payment integrations (Stripe, Paystack, Flutterwave)",
-            "Performance rescue: making slow React sites fast",
-          ].map((service) => (
-            <div
-              key={service}
-              className="bg-gray-800/40 backdrop-blur-lg border border-white/10 rounded-2xl p-5 text-gray-200 text-sm sm:text-base leading-relaxed text-center hover:border-amber-400/40 transition-all duration-500"
-            >
-              {service}
-            </div>
-          ))}
-        </div>
-      </motion.div>
-
-      {/* How I work */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9 }}
-        viewport={{ once: true }}
-        className="relative z-10 max-w-3xl mx-auto mt-12"
-      >
-        <div className="bg-gray-900/60 border border-white/10 rounded-2xl p-6 sm:p-8 border-l-4 border-l-amber-400">
-          <h3 className="text-xl sm:text-2xl font-semibold text-white mb-3">
+        {/* How I work */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="mt-14 p-6 sm:p-8 rounded-2xl bg-accent-tint border-l-4 border-accent"
+        >
+          <h3 className="font-display text-lg sm:text-xl font-bold mb-3">
             How I work
           </h3>
-          <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
+          <p className="text-ink/85 text-base sm:text-lg leading-relaxed max-w-3xl">
             Clear communication, daily updates if you want them, and I ship in
             small reviewable pieces — no month-long silence then a big reveal.
             I record short Loom walkthroughs of everything I deliver so you
             always know what you got.
           </p>
-        </div>
-      </motion.div>
+        </motion.div>
 
-      {/* CTA */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9, delay: 0.2 }}
-        viewport={{ once: true }}
-        className="relative z-10 flex flex-col items-center gap-5 mt-12"
-      >
-        <motion.a
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.98 }}
-          href="mailto:demiladeala@gmail.com?subject=Project%20inquiry"
-          className="flex items-center gap-3 py-3 px-8 bg-amber-400 text-black font-bold text-base sm:text-lg rounded-full transition-all duration-300 hover:bg-amber-300 shadow-lg shadow-amber-500/20"
+        {/* CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="flex flex-col items-center gap-5 mt-14"
         >
-          <AiOutlineMail size={22} />
-          Email me — I reply within 24 hours
-        </motion.a>
+          <a
+            href="mailto:demiladeala@gmail.com?subject=Project%20inquiry"
+            className="flex items-center gap-3 px-7 py-3.5 bg-accent text-white font-medium rounded-lg hover:bg-accent-dark transition-colors"
+          >
+            <AiOutlineMail size={20} />
+            Email me — I reply within 24 hours
+          </a>
 
-        {/* Availability */}
-        <p className="flex items-center gap-2 text-gray-300 text-sm sm:text-base">
-          <span className="relative flex h-2.5 w-2.5">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
-            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-400" />
-          </span>
-          Currently taking on 1–2 new projects for August 2026.
-        </p>
-      </motion.div>
-    </section>
+          <p className="flex items-center gap-2 text-muted text-sm sm:text-base">
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-60" />
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500" />
+            </span>
+            Currently taking on 1–2 new projects for August 2026.
+          </p>
+        </motion.div>
+      </div>
+    </div>
   );
 }
