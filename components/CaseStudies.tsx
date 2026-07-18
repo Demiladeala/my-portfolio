@@ -83,6 +83,11 @@ const caseStudies: CaseStudy[] = [
     imageAlt: "Zent marketplace storefront — live store homepage",
     links: [
       {
+        label: "A live store",
+        href: "https://jonnystore.getzent.shop/",
+        icon: "live",
+      },
+      {
         label: "Demo store",
         href: "https://demilade.zentstore.com/",
         icon: "live",
