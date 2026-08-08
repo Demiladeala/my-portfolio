@@ -38,7 +38,7 @@ const caseStudies: CaseStudy[] = [
       "Built to be maintained: consistent design system, typed end-to-end with TypeScript",
     ],
     result:
-      "In production today. Merchants log in every day to manage orders, inventory, and payouts on pages I designed and built, and features shaped by their feedback have shipped and stuck.",
+      "In production today, serving 1,000+ onboarded merchants. They log in every day to manage orders, inventory, and payouts on pages I designed and built, and features shaped by their feedback have shipped and stuck.",
     stack: [
       "Next.js",
       "TypeScript",
@@ -77,7 +77,7 @@ const caseStudies: CaseStudy[] = [
       body: "Every merchant's storefront, subdomain or custom domain is served by a single Next.js codebase that has to figure out which store you're visiting on every request. I built the tenant resolution and SSR hydration layer: the server identifies the merchant from the hostname, fetches their store data, theme, and template in parallel, and pre-seeds the client-side cache before first paint, so shoppers land on a fully branded store instantly, with no logo flash, no skeleton pop, and no client-side fetch waterfall. Not-found, suspended, and maintenance states are all resolved server-side too.",
     },
     result:
-      "Live stores run on it right now, real customers checking out on storefronts I engineered.",
+      "Powering 500+ live stores from a single multi-tenant codebase, with real customers checking out on storefronts I engineered.",
     stack: ["React", "Next.js", "TypeScript", "Tailwind"],
     image: "/case-storefront.png",
     imageAlt: "Zent marketplace storefront — live store homepage",
@@ -115,7 +115,7 @@ const caseStudies: CaseStudy[] = [
       "Fully responsive, typed end-to-end with TypeScript",
     ],
     result:
-      'Open source with a documented architecture, clients can read exactly how I think before hiring me. It\'s also my answer when a client asks "can I see your code?"',
+      'Open source with a documented architecture, so teams can read exactly how I think before hiring me. It\'s also my answer when anyone asks "can I see your code?"',
     stack: [
       "Next.js (App Router)",
       "TypeScript",
@@ -242,7 +242,7 @@ export default function CaseStudies() {
                   {study.engineering && (
                     <div>
                       <h4 className="font-semibold mb-3">
-                        The engineering details clients care about
+                        The engineering details that matter
                       </h4>
                       <BulletList items={study.engineering} />
                     </div>

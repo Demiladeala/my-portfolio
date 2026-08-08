@@ -22,10 +22,15 @@ export default function Hero({}: Props) {
         </h1>
 
         <p className="text-muted text-lg sm:text-xl leading-relaxed max-w-2xl mt-7">
-          Frontend engineer behind the vendor dashboard and marketplace
-          storefront of a fast-growing e-commerce platform. Merchants run their
-          entire businesses on interfaces I built. React · Next.js · TypeScript.
-          Pages load in about a second, because slow stores lose sales.
+          Sole frontend engineer on Zent&apos;s vendor dashboard, used daily by
+          1,000+ merchants, and now leading its marketplace storefront — 500+
+          live stores from a single Next.js codebase. React · Next.js ·
+          TypeScript. Pages load in about a second, because slow stores lose
+          sales.
+        </p>
+
+        <p className="text-ink/85 text-base sm:text-lg font-medium mt-5">
+          Open to remote frontend roles (React / Next.js) · Lagos, UTC+1.
         </p>
 
         <div className="flex flex-wrap items-center gap-4 mt-10">
@@ -36,17 +41,17 @@ export default function Hero({}: Props) {
             See how I work
           </Link>
           <Link
-            href="mailto:demiladeala@gmail.com?subject=Project%20inquiry"
+            href="/Oluwademilade-Ala-Resume.pdf"
+            target="_blank"
             className="px-6 py-3 rounded-lg border border-line font-medium text-ink hover:border-ink transition-colors"
           >
-            Email me
+            Resume
           </Link>
           <Link
-            href="https://docs.google.com/document/d/1LbafwukEPuOpLDcQ0dcUP4ejLXRa6MWFzms7gW0lkB0/edit?tab=t.0"
-            target="_blank"
+            href="mailto:demiladeala@gmail.com?subject=Hello%20from%20your%20portfolio"
             className="text-muted hover:text-ink font-medium underline underline-offset-4 decoration-line hover:decoration-ink transition-colors"
           >
-            Resume
+            Email me
           </Link>
         </div>
       </motion.div>

@@ -12,10 +12,12 @@ export default function Home() {
   return (
     <div className="bg-paper text-ink scroll-smooth">
       <Head>
-        <title>Oluwademilade Ala — Frontend Engineer</title>
+        <title>
+          Oluwademilade Ala — Frontend Engineer (React / Next.js)
+        </title>
         <meta
           name="description"
-          content="Frontend engineer building fast, conversion-focused e-commerce storefronts and dashboards. React, Next.js, TypeScript."
+          content="Frontend engineer building fast, conversion-focused e-commerce storefronts and dashboards — 1,000+ merchants, 500+ live stores. React, Next.js, TypeScript. Open to remote roles."
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />

@@ -25,10 +25,10 @@ export default function Header({}: Props) {
             href="#work-with-me"
             className="hidden sm:inline text-muted hover:text-ink transition-colors"
           >
-            Services
+            Work with me
           </Link>
           <a
-            href="mailto:demiladeala@gmail.com?subject=Project%20inquiry"
+            href="mailto:demiladeala@gmail.com?subject=Hello%20from%20your%20portfolio"
             className="font-medium text-accent hover:text-accent-dark transition-colors"
           >
             Email me

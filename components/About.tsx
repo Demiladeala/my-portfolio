@@ -21,15 +21,20 @@ export default function About({}: Props) {
 
           <div className="text-ink/85 text-lg leading-relaxed space-y-6">
             <p>
-              I specialize in building performant software with React, React
-              Native, TypeScript, and Next.js storefronts, dashboards, and the
-              systems behind them.
+              I build production frontends for e-commerce: storefronts,
+              dashboards, and the state, payment, and performance layers behind
+              them. React, Next.js, TypeScript, React Native.
             </p>
             <p>
-              I thrive on solving challenging problems, designing intuitive
-              interfaces, and collaborating with teams to bring bold ideas to
-              life. My goal is to craft software that&apos;s not only functional
-              but delightful to use.
+              Most of my work has been ownership-heavy — taking a surface from
+              an empty repo to something merchants use every day, then keeping
+              it fast as it grows. I work async, ship in small reviewable
+              pieces, and write code meant to be maintained by someone who
+              isn&apos;t me.
+            </p>
+            <p>
+              Based in Lagos (UTC+1). Open to remote frontend roles, and to
+              freelance work alongside them.
             </p>
           </div>
         </motion.div>

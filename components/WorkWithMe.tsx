@@ -8,7 +8,7 @@ type Props = {};
 const services = [
   "E-commerce storefronts & landing pages (Next.js)",
   "Admin dashboards & internal tools",
-  "Payment integrations (Stripe, Paystack, Flutterwave)",
+  "Payment integrations, all live in production (Stripe, Paystack, Flutterwave, Nomba)",
   "Performance rescue: making slow React sites fast",
 ];
 
@@ -33,6 +33,19 @@ export default function WorkWithMe({}: Props) {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12"
         >
+          <div className="bg-surface border border-line rounded-2xl p-7 sm:p-8 md:col-span-2">
+            <h3 className="font-display text-lg sm:text-xl font-bold mb-3">
+              For hiring teams
+            </h3>
+            <p className="text-ink/85 text-base sm:text-lg leading-relaxed">
+              I&apos;m open to full-time remote frontend roles. I lead frontend
+              on production e-commerce dashboards and multi-tenant storefronts
+              serving 1,000+ merchants — comfortable owning features end to end,
+              working async, and shipping in small reviewable pieces. Based in
+              Lagos (UTC+1), overlapping well with European and US-East hours.
+            </p>
+          </div>
+
           <div className="bg-surface border border-line rounded-2xl p-7 sm:p-8">
             <h3 className="font-display text-lg sm:text-xl font-bold mb-3">
               For agencies
@@ -108,7 +121,7 @@ export default function WorkWithMe({}: Props) {
           className="flex flex-col items-center gap-5 mt-14"
         >
           <a
-            href="mailto:demiladeala@gmail.com?subject=Project%20inquiry"
+            href="mailto:demiladeala@gmail.com?subject=Hello%20from%20your%20portfolio"
             className="flex items-center gap-3 px-7 py-3.5 bg-accent text-white font-medium rounded-lg hover:bg-accent-dark transition-colors"
           >
             <AiOutlineMail size={20} />
@@ -120,7 +133,7 @@ export default function WorkWithMe({}: Props) {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-60" />
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500" />
             </span>
-            Currently taking on 1–2 new projects for August 2026.
+            Open to full-time remote roles · taking 1–2 freelance projects.
           </p>
         </motion.div>
       </div>
