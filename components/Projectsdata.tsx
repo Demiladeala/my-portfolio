@@ -35,62 +35,17 @@ export const projects = [
   },
   {
     id: "4",
-    image: "/kukeat.png",
-    title: "Kukeat",
+    image: "/wander.png",
+    title: "Wander",
     description:
-      "Nigerian shoppers wanted market-fresh groceries without the market trip. I built the full storefront — catalogue browsing, cart, checkout, and delivery ordering — designed mobile-first for how customers actually shop. Next.js, Tailwind. Live and taking orders at kukeat.com.",
-    tech: ["Next Js", "Tailwind", "Css"],
+      "A travel-platform built to simplify exploration by uniting curated destination guides, interactive maps, and real-time insights—helping adventure-seekers discover hidden gems, plan intelligently, and experience more of the world with less effort.",
+    tech: ["GSAP", "Three Js", "React", "Shadcn"],
     category: "Web Apps",
-    link: "https://www.kukeat.com/",
+    link: "https://www.gowanderr.com/",
     source: "",
   },
   {
     id: "5",
-    image: "/bookxity.png",
-    title: "Bookxity",
-    description:
-      "An online bookstore needed a fast storefront with a catalogue non-developers could update. I built the full e-commerce flow — browsing, cart, and checkout — with content managed in Sanity CMS. Next.js, Tailwind, Sanity. New titles go live without touching code.",
-    tech: ["Next Js", "Tailwind", "Sanity"],
-    category: "Web Apps",
-    link: "https://book-xity-ecommerce.vercel.app/",
-    source: "https://github.com/Demiladeala/bookXity_ecommerce",
-  },
-  {
-    id: "6",
-    image: "/chowopa.png",
-    title: "Chowopa",
-    description:
-      "A multi-store marketplace where several vendors sell under one roof. I built the customer-facing experience — store browsing, product pages, and cart flow working consistently across every storefront. React, Tailwind. Open source — the code is public on GitHub.",
-    tech: ["React", "Css", "Tailwind"],
-    category: "Web Apps",
-    link: "https://chowopa-v2-test.netlify.app/",
-    source: "https://github.com/Fantom-01/chowopa-v2",
-  },
-  {
-    id: "7",
-    image: "/abujaroommates.png",
-    title: "Abuja Roommates",
-    description:
-      "AbujaRoommates is a luxury serviced-apartment platform offering short-let stays and lease options across major West-African cities. With beautifully furnished units, prime locations, and seamless booking, it delivers comfort and convenience to travelers and tenants alike.",
-    tech: ["Next Js", "RTK Query", "Tailwind", "Css"],
-    category: "Web Apps",
-    link: "https://abujaroommates.com/",
-    source: "",
-  },
-  {
-    id: "8",
-    image: "/roommate-portal.png",
-    title: "Abuja Roommates Host Portal",
-    description:
-      "A comprehensive host and guest portal for luxury serviced apartments",
-    tech: ["Next Js", "Tailwind", "Css"],
-    category: "Admin Dashboards",
-    link: "https://app.abujaroommates.com/",
-    source: "",
-  },
-  // --- Other client work & products ---
-  {
-    id: "9",
     image: "/lockedin.webp",
     title: "LockedIN",
     description:
@@ -108,16 +63,61 @@ export const projects = [
     contain: true,
   },
   {
-    id: "10",
-    image: "/wander.png",
-    title: "Wander",
+    id: "6",
+    image: "/kukeat.png",
+    title: "Kukeat",
     description:
-      "A travel-platform built to simplify exploration by uniting curated destination guides, interactive maps, and real-time insights—helping adventure-seekers discover hidden gems, plan intelligently, and experience more of the world with less effort.",
-    tech: ["GSAP", "Three Js", "React", "Shadcn"],
+      "Nigerian shoppers wanted market-fresh groceries without the market trip. I built the full storefront — catalogue browsing, cart, checkout, and delivery ordering — designed mobile-first for how customers actually shop. Next.js, Tailwind. Live and taking orders at kukeat.com.",
+    tech: ["Next Js", "Tailwind", "Css"],
     category: "Web Apps",
-    link: "https://www.gowanderr.com/",
+    link: "https://www.kukeat.com/",
     source: "",
   },
+  {
+    id: "7",
+    image: "/bookxity.png",
+    title: "Bookxity",
+    description:
+      "An online bookstore needed a fast storefront with a catalogue non-developers could update. I built the full e-commerce flow — browsing, cart, and checkout — with content managed in Sanity CMS. Next.js, Tailwind, Sanity. New titles go live without touching code.",
+    tech: ["Next Js", "Tailwind", "Sanity"],
+    category: "Web Apps",
+    link: "https://book-xity-ecommerce.vercel.app/",
+    source: "https://github.com/Demiladeala/bookXity_ecommerce",
+  },
+  {
+    id: "8",
+    image: "/chowopa.png",
+    title: "Chowopa",
+    description:
+      "A multi-store marketplace where several vendors sell under one roof. I built the customer-facing experience — store browsing, product pages, and cart flow working consistently across every storefront. React, Tailwind. Open source — the code is public on GitHub.",
+    tech: ["React", "Css", "Tailwind"],
+    category: "Web Apps",
+    link: "https://chowopa-v2-test.netlify.app/",
+    source: "https://github.com/Fantom-01/chowopa-v2",
+  },
+  {
+    id: "9",
+    image: "/abujaroommates.png",
+    title: "Abuja Roommates",
+    description:
+      "AbujaRoommates is a luxury serviced-apartment platform offering short-let stays and lease options across major West-African cities. With beautifully furnished units, prime locations, and seamless booking, it delivers comfort and convenience to travelers and tenants alike.",
+    tech: ["Next Js", "RTK Query", "Tailwind", "Css"],
+    category: "Web Apps",
+    link: "https://abujaroommates.com/",
+    source: "",
+  },
+  {
+    id: "10",
+    image: "/roommate-portal.png",
+    title: "Abuja Roommates Host Portal",
+    description:
+      "A comprehensive host and guest portal for luxury serviced apartments",
+    tech: ["Next Js", "Tailwind", "Css"],
+    category: "Admin Dashboards",
+    link: "https://app.abujaroommates.com/",
+    source: "",
+  },
+  // --- Other client work & products ---
   {
     id: "11",
     image: "/64sqr.png",
