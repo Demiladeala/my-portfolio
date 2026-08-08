@@ -33,7 +33,7 @@ export default function About({}: Props) {
               isn&apos;t me.
             </p>
             <p>
-              Based in Lagos (UTC+1). Open to remote frontend roles, and to
+              Based in Nigeria (UTC+1). Open to remote frontend roles, and to
               freelance work alongside them.
             </p>
           </div>

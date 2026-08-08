@@ -22,15 +22,15 @@ export default function Hero({}: Props) {
         </h1>
 
         <p className="text-muted text-lg sm:text-xl leading-relaxed max-w-2xl mt-7">
-          Sole frontend engineer on Zent&apos;s vendor dashboard, used daily by
-          1,000+ merchants, and now leading its marketplace storefront — 500+
+          Frontend engineer on Zent&apos;s vendor dashboard, used daily by
+          1,000+ merchants, and now leading its marketplace storefront. 500+
           live stores from a single Next.js codebase. React · Next.js ·
           TypeScript. Pages load in about a second, because slow stores lose
           sales.
         </p>
 
         <p className="text-ink/85 text-base sm:text-lg font-medium mt-5">
-          Open to remote frontend roles (React / Next.js) · Lagos, UTC+1.
+          Open to remote frontend roles (React / Next.js) · Nigeria, UTC+1.
         </p>
 
         <div className="flex flex-wrap items-center gap-4 mt-10">
