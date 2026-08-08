@@ -42,7 +42,7 @@ export default function WorkWithMe({}: Props) {
               on production e-commerce dashboards and multi-tenant storefronts
               serving 1,000+ merchants — comfortable owning features end to end,
               working async, and shipping in small reviewable pieces. Based in
-              Lagos (UTC+1), overlapping well with European and US-East hours.
+              Nigeria (UTC+1), overlapping well with European and US-East hours.
             </p>
           </div>
 
