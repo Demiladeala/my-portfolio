@@ -38,8 +38,8 @@ export const projects = [
     image: "/wander.png",
     title: "Wander",
     description:
-      "A travel-platform built to simplify exploration by uniting curated destination guides, interactive maps, and real-time insights—helping adventure-seekers discover hidden gems, plan intelligently, and experience more of the world with less effort.",
-    tech: ["GSAP", "Three Js", "React", "Shadcn"],
+      "Trip planning usually means a dozen open browser tabs. Wander puts curated destination guides, interactive maps, and AI-assisted planning in one place. Built with a three-person team (frontend, backend, marketing) — I built the entire frontend in Next.js and TypeScript. Live at gowanderr.com.",
+    tech: ["Next Js", "Typescript", "Three Js", "GSAP", "Shadcn"],
     category: "Web Apps",
     link: "https://www.gowanderr.com/",
     source: "",
@@ -49,13 +49,14 @@ export const projects = [
     image: "/lockedin.webp",
     title: "LockedIN",
     description:
-      "A productivity app that drives consistency and focus through partner co-working, gamification, and community accountability.",
+      "Staying focused is easier when someone else is in the room. LockedIn pairs people into timed co-working sessions with video, streaks, and community accountability. Started at a hackathon, now a five-person team — I own the web side: the Next.js app for accounts and instant sessions, a React video call room with session timers and join tokens, and the landing pages. Live on Google Play with 1K+ installs.",
     tech: [
+      "Next Js",
+      "React",
+      "React Native",
       "Jitsi Video Conferencing",
       "Websocket",
-      "React Native",
       "Nativewind",
-      "",
     ],
     category: "Mobile Apps",
     link: "https://play.google.com/store/apps/details?id=com.lockedinpartner.lockedin&hl=en",
