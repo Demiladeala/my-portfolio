@@ -36,9 +36,9 @@ export const projects = [
   {
     id: "4",
     image: "/wander.png",
-    title: "Wander",
+    title: "Wanderr",
     description:
-      "Trip planning usually means a dozen open browser tabs. Wander puts curated destination guides, interactive maps, and AI-assisted planning in one place. Built with a three-person team (frontend, backend, marketing) — I built the entire frontend in Next.js and TypeScript. Live at gowanderr.com.",
+      "Trip planning usually means a dozen open browser tabs. Wanderr puts curated destination guides, interactive maps, and AI-assisted planning in one place. Built with a three-person team (frontend, backend, marketing) — I built the entire frontend in Next.js and TypeScript. Live at gowanderr.com.",
     tech: ["Next Js", "Typescript", "Three Js", "GSAP", "Shadcn"],
     category: "Web Apps",
     link: "https://www.gowanderr.com/",
